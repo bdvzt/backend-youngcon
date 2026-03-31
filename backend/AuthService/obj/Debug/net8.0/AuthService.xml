@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthService</name>
+    </assembly>
+    <members>
+        <member name="M:AuthService.Controllers.AccountController.Register(AuthService.Models.RegisterRequest)">
+            <summary>
+            Регистрация пользователя сотрудником (можно создать Client или Employee)
+            </summary>
+        </member>
+    </members>
+</doc>
