@@ -1,0 +1,18 @@
+using UsersService.Domain.Entities;
+using UsersService.DTOs.Events;
+
+namespace UsersService.Infrastructure.Mappers;
+
+public static class ZoneMapper
+{
+    public static ZoneDTO ToDto(this Zone zone)
+    {
+        return new ZoneDTO()
+        {
+            Id = zone.Id,
+            FloorId = zone.FloorId,
+            Title = zone.Title,
+            Description = zone.Description
+        };
+    }
+}
