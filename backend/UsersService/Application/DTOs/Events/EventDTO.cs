@@ -13,5 +13,6 @@ public class EventDTO
     public required EventType EventType { get; set; }
     public required Boolean IsLive { get; set; }
     public required Guid ZoneId { get; set; }
-    public Speaker Speaker { get; set; }
+    public required Guid FestivalId { get; set; }
+    public SpeakerDTO? Speaker { get; set; }
 }

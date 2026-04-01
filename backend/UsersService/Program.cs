@@ -7,7 +7,9 @@ using UsersService.Infrastructure.Auth;
 using Microsoft.OpenApi.Models;
 using Polly;
 using UsersService.Infrastructure.Repositories;
+using UsersService.Repositories.Events;
 using UsersService.Services;
+using UsersService.Services.Events;
 using UsersService.Infrastructure.Errors.Exceptions;
 using UsersService.Services.Validators;
 
@@ -37,11 +39,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UsersDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDbContext<EventDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>()!;
 builder.Services.AddSingleton(jwtSettings);
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IEventService, EventService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 builder.Services.AddValidatorsFromAssemblyContaining<CreateUserValidator>();
@@ -102,14 +109,16 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<UsersDbContext>();
+    var usersDb = scope.ServiceProvider.GetRequiredService<UsersDbContext>();
+    var eventsDb = scope.ServiceProvider.GetRequiredService<EventDbContext>();
 
     var retry = Policy
         .Handle<Exception>()
         .WaitAndRetry(5, retryAttempt => 
             TimeSpan.FromSeconds(5));
 
-    retry.Execute(() => db.Database.Migrate());
+    retry.Execute(() => usersDb.Database.Migrate());
+    retry.Execute(() => eventsDb.Database.Migrate());
 }
 
 app.UseSwagger();

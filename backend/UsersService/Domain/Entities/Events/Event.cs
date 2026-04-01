@@ -12,5 +12,8 @@ public class Event
     public required EventType EventType { get; set; }
     public required Boolean IsLive { get; set; }
     public required Guid ZoneId { get; set; }
-    public Speaker Speaker { get; set; }
+    public required Guid FestivalId { get; set; }
+    public Zone Zone { get; set; } = null!;
+    public Festival Festival { get; set; } = null!;
+    public Speaker? Speaker { get; set; }
 }

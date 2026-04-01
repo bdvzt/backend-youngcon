@@ -18,23 +18,73 @@
   <component name="ChangeListManager">
     <list default="true" id="654e1c12-e02c-4c91-8636-7bf66d2a8949" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/CreateUserRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Auth/CreateUserRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/LoginRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Auth/LoginRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/PagedRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Auth/PagedRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/PagedResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Auth/PagedResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Auth/UserDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/Services/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/Services/Users/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Application/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/Services/Users/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/BlackToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Users/BlackToken.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Users/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Infrastructure/Repositories/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/Repositories/Users/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Infrastructure/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/Repositories/Users/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/Infrastructure/Repositories/UsersDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/Data/UsersDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/bin/Debug/net8.0/AccountsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/bin/Debug/net8.0/AccountsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/bin/Debug/net8.0/AccountsService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/bin/Debug/net8.0/AccountsService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/AccountsService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/AccountsService.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/AccountsService.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/ref/AccountsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/ref/AccountsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/refint/AccountsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/Debug/net8.0/refint/AccountsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountsService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/AccountsService/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/bin/Debug/net8.0/CreditsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/bin/Debug/net8.0/CreditsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/bin/Debug/net8.0/CreditsService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/bin/Debug/net8.0/CreditsService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/CreditsService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/CreditsService.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/CreditsService.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/ref/CreditsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/ref/CreditsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/refint/CreditsService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/Debug/net8.0/refint/CreditsService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditsService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/CreditsService/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/Events/EventDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Events/EventDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Application/DTOs/Events/FestivalDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/DTOs/Events/FestivalDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Application/Data/EventDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Application/Data/EventDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Festival.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Festival.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Floor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Floor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Speaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Speaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Zone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Domain/Entities/Events/Zone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Infrastructure/Mappers/EventMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Infrastructure/Mappers/EventMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Infrastructure/Mappers/FestivalMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Infrastructure/Mappers/FestivalMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/bin/Debug/net8.0/UsersService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/bin/Debug/net8.0/UsersService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/bin/Debug/net8.0/UsersService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/bin/Debug/net8.0/UsersService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/bin/Debug/net8.0/UsersService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/bin/Debug/net8.0/UsersService.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/UsersService.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/ref/UsersService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/ref/UsersService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/refint/UsersService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/Debug/net8.0/refint/UsersService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/UsersService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/UsersService.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/bdvzt/Desktop/YoungConBackend/backend" value="3BJBXgIiKRqDCfGPrwfkOaRLrKJ" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
@@ -50,7 +100,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/bdvzt/backend-youngcon",
+    "url": "https://github.com/bdvzt/backend-youngcon.git",
     "accountId": "ac5a55f2-1001-44ff-b9d0-abf0c2f52086"
   }
 }]]></component>
@@ -66,22 +116,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.UsersService: http.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.UsersService: http.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.UsersService: http">
     <configuration name="AccountsService: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AccountsService/AccountsService.csproj" />
@@ -244,7 +294,8 @@
       <workItem from="1774197336570" duration="17000" />
       <workItem from="1774960153894" duration="1144000" />
       <workItem from="1774965947332" duration="150000" />
-      <workItem from="1774966145321" duration="9349000" />
+      <workItem from="1774966145321" duration="12057000" />
+      <workItem from="1775029661099" duration="745000" />
     </task>
     <servers />
   </component>
@@ -273,5 +324,17 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

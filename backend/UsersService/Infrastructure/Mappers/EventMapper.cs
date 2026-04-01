@@ -17,7 +17,8 @@ public static class EventMapper
             EventType = eventik.EventType,
             IsLive = eventik.IsLive,
             ZoneId = eventik.ZoneId,
-            Speaker = eventik.Speaker
+            FestivalId = eventik.FestivalId,
+            Speaker = eventik.Speaker?.ToDto()
         };
     }
 }

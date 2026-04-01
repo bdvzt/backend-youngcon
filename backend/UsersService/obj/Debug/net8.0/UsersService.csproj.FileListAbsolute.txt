@@ -263,3 +263,4 @@
 /Users/bdvzt/Desktop/YoungConBackend/backend/UsersService/obj/Debug/net8.0/UsersService.pdb
 /Users/bdvzt/Desktop/YoungConBackend/backend/UsersService/obj/Debug/net8.0/UsersService.genruntimeconfig.cache
 /Users/bdvzt/Desktop/YoungConBackend/backend/UsersService/obj/Debug/net8.0/ref/UsersService.dll
+/Users/bdvzt/Desktop/YoungConBackend/backend/UsersService/obj/Debug/net8.0/UsersService.sourcelink.json

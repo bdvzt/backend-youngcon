@@ -7,4 +7,6 @@ public class Speaker
     public required string LastName { get; set; } 
     public required string Job { get; set; }
     public required string Bio { get; set; }
+    
+    public ICollection<Event> Events { get; set; } = [];
 }

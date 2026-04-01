@@ -10,6 +10,7 @@ public static class FestivalMapper
     {
         return new FestivalDTO
         {
+            Id = festival.Id,
             Title = festival.Title,
             Description = festival.Description,
             StartDateTime = festival.StartDateTime,

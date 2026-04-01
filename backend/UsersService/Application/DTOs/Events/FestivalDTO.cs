@@ -2,6 +2,7 @@ namespace UsersService.DTOs.Events;
 
 public class FestivalDTO
 {
+    public required Guid Id { get; set; }
     public required string Title { get; set; } 
     public required string Description { get; set; } 
     public required DateTime StartDateTime { get; set; }
