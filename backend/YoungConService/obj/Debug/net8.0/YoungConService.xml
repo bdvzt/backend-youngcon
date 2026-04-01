@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YoungConService</name>
+    </assembly>
+    <members>
+        <member name="M:YoungConService.Controllers.UsersController.Create(YoungConService.DTOs.Users.CreateUserRequest)">
+            <summary>
+            Создать пользователя (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.Get(System.Guid)">
+            <summary>
+            Получить информацию о пользователе
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetMyself">
+            <summary>
+            Получить информацию о себе
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetAll(YoungConService.DTOs.Users.PagedRequest)">
+            <summary>
+            Получить информацию о пользователях
+            </summary>
+        </member>
+        <member name="T:YoungConService.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
