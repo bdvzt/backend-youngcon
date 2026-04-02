@@ -4,6 +4,31 @@
         <name>YoungConService</name>
     </assembly>
     <members>
+        <member name="M:YoungConService.Controllers.AchievementsController.GetAll">
+            <summary>
+            Получить список ачивок
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.AchievementsController.GetById(System.Guid)">
+            <summary>
+            Получить ачивку по идентификатору
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.AchievementsController.Create(YoungConService.DTOs.Achievments.CreateAchievmentRequest)">
+            <summary>
+            Создать ачивку (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.AchievementsController.Update(System.Guid,YoungConService.DTOs.Achievments.UpdateAchievmentRequest)">
+            <summary>
+            Обновить ачивку (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.AchievementsController.Delete(System.Guid)">
+            <summary>
+            Удалить ачивку (доступно только сотруднику)
+            </summary>
+        </member>
         <member name="M:YoungConService.Controllers.AuthController.Login(YoungConService.DTOs.Users.LoginRequest)">
             <summary>
             Авторизация пользователя по почте и паролю
@@ -46,17 +71,17 @@
         </member>
         <member name="M:YoungConService.Controllers.EventsController.Create(YoungConService.DTOs.Events.CreateEventRequest)">
             <summary>
-            Создать событие
+            Создать событие (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.EventsController.Update(System.Guid,YoungConService.DTOs.Events.UpdateEventRequest)">
             <summary>
-            Обновить событие
+            Обновить событие (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.EventsController.Delete(System.Guid)">
             <summary>
-            Удалить событие
+            Удалить событие (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.FestivalsController.GetAll">
@@ -76,17 +101,17 @@
         </member>
         <member name="M:YoungConService.Controllers.FestivalsController.Create(YoungConService.DTOs.Festivals.CreateFestivalRequest)">
             <summary>
-            Создать фестиваль
+            Создать фестиваль (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.FestivalsController.Update(System.Guid,YoungConService.DTOs.Festivals.UpdateFestivalRequest)">
             <summary>
-            Обновить фестиваль
+            Обновить фестиваль (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.FestivalsController.Delete(System.Guid)">
             <summary>
-            Удалить фестиваль
+            Удалить фестиваль (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.FloorsController.GetAll">
@@ -101,17 +126,17 @@
         </member>
         <member name="M:YoungConService.Controllers.FloorsController.Create(YoungConService.DTOs.Floors.CreateFloorRequest)">
             <summary>
-            Создать этаж
+            Создать этаж (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.FloorsController.Update(System.Guid,YoungConService.DTOs.Floors.UpdateFloorRequest)">
             <summary>
-            Обновить этаж
+            Обновить этаж (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.FloorsController.Delete(System.Guid)">
             <summary>
-            Удалить этаж
+            Удалить этаж (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.SpeakersController.GetAll">
@@ -126,17 +151,17 @@
         </member>
         <member name="M:YoungConService.Controllers.SpeakersController.Create(YoungConService.DTOs.Speakers.CreateSpeakerRequest)">
             <summary>
-            Создать спикера
+            Создать спикера (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.SpeakersController.Update(System.Guid,YoungConService.DTOs.Speakers.UpdateSpeakerRequest)">
             <summary>
-            Обновить спикера
+            Обновить спикера (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.SpeakersController.Delete(System.Guid)">
             <summary>
-            Удалить спикера
+            Удалить спикера (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.UsersController.Create(YoungConService.DTOs.Users.CreateUserRequest)">
@@ -201,17 +226,17 @@
         </member>
         <member name="M:YoungConService.Controllers.ZonesController.Create(YoungConService.DTOs.Zones.CreateZoneRequest)">
             <summary>
-            Создать зону
+            Создать зону (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.ZonesController.Update(System.Guid,YoungConService.DTOs.Zones.UpdateZoneRequest)">
             <summary>
-            Обновить зону
+            Обновить зону (доступно только сотруднику)
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.ZonesController.Delete(System.Guid)">
             <summary>
-            Удалить зону
+            Удалить зону (доступно только сотруднику)
             </summary>
         </member>
         <member name="T:YoungConService.Migrations.RefreshSeedData">

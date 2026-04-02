@@ -37,7 +37,7 @@ public class ZonesController(IZoneService service) : ControllerBase
         => Ok(await service.GetByFloorIdAsync(floorId));
 
     /// <summary>
-    /// Создать зону
+    /// Создать зону (доступно только сотруднику)
     /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
@@ -48,7 +48,7 @@ public class ZonesController(IZoneService service) : ControllerBase
     }
 
     /// <summary>
-    /// Обновить зону
+    /// Обновить зону (доступно только сотруднику)
     /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
@@ -59,7 +59,7 @@ public class ZonesController(IZoneService service) : ControllerBase
     }
 
     /// <summary>
-    /// Удалить зону
+    /// Удалить зону (доступно только сотруднику)
     /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]

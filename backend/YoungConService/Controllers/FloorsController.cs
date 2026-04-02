@@ -29,7 +29,7 @@ public class FloorsController(IFloorService service) : ControllerBase
     }
 
     /// <summary>
-    /// Создать этаж
+    /// Создать этаж (доступно только сотруднику)
     /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
@@ -40,7 +40,7 @@ public class FloorsController(IFloorService service) : ControllerBase
     }
 
     /// <summary>
-    /// Обновить этаж
+    /// Обновить этаж (доступно только сотруднику)
     /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
@@ -51,7 +51,7 @@ public class FloorsController(IFloorService service) : ControllerBase
     }
 
     /// <summary>
-    /// Удалить этаж
+    /// Удалить этаж (доступно только сотруднику)
     /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]
