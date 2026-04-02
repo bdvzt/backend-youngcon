@@ -1,9 +1,9 @@
 version: '3.9'
 
 services:
-  users-db:
+  db:
     image: postgres:16
-    container_name: users-db
+    container_name: youngcon-db
     environment:
       POSTGRES_DB: usersdb
       POSTGRES_USER: postgres
@@ -18,59 +18,25 @@ services:
       timeout: 5s
       retries: 5
 
-  accounts-db:
-    image: postgres:16
-    container_name: accounts-db
-    environment:
-      POSTGRES_DB: accountsdb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+  api:
+    build:
+      context: ./YoungConService
+      dockerfile: Dockerfile
+    container_name: youngcon-api
     ports:
-      - "55434:5432"
-    volumes:
-      - accounts_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=usersdb;Username=postgres;Password=postgres"
+      JwtSettings__Secret: "SUPER_SECRET_KEY_123456789_SUPER_SECRET"
+      JwtSettings__Issuer: "UsersService"
+      JwtSettings__Audience: "BankClients"
+      JwtSettings__ExpiryMinutes: "60"
+      Cors__AllowedOrigins__0: "http://localhost:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
 
-  credits-db:
-    image: postgres:16
-    container_name: credits-db
-    environment:
-      POSTGRES_DB: creditsdb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-    ports:
-      - "55435:5432"
-    volumes:
-      - credits_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-
-  hangfire-db:
-    image: postgres:16
-    container_name: hangfire-db
-    environment:
-      POSTGRES_DB: hangfiredb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-    ports:
-      - "55436:5432"
-    volumes:
-      - hangfire_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-      
 volumes:
   users_data:
-  accounts_data:
-  credits_data:
-  hangfire_data:
