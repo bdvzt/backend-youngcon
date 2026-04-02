@@ -43,7 +43,7 @@ public class FestivalsController(IFestivalService service) : ControllerBase
     }
 
     /// <summary>
-    /// Создать фестиваль
+    /// Создать фестиваль (доступно только сотруднику)
     /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
@@ -54,7 +54,7 @@ public class FestivalsController(IFestivalService service) : ControllerBase
     }
 
     /// <summary>
-    /// Обновить фестиваль
+    /// Обновить фестиваль (доступно только сотруднику)
     /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
@@ -65,7 +65,7 @@ public class FestivalsController(IFestivalService service) : ControllerBase
     }
 
     /// <summary>
-    /// Удалить фестиваль
+    /// Удалить фестиваль (доступно только сотруднику)
     /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]

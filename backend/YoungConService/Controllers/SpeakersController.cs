@@ -29,7 +29,7 @@ public class SpeakersController(ISpeakerService service) : ControllerBase
     }
 
     /// <summary>
-    /// Создать спикера
+    /// Создать спикера (доступно только сотруднику)
     /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
@@ -40,7 +40,7 @@ public class SpeakersController(ISpeakerService service) : ControllerBase
     }
 
     /// <summary>
-    /// Обновить спикера
+    /// Обновить спикера (доступно только сотруднику)
     /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
@@ -51,7 +51,7 @@ public class SpeakersController(ISpeakerService service) : ControllerBase
     }
 
     /// <summary>
-    /// Удалить спикера
+    /// Удалить спикера (доступно только сотруднику)
     /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]

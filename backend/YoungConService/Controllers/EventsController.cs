@@ -64,7 +64,7 @@ public class EventsController(IEventService service) : ControllerBase
         => Ok(await service.ToggleLikeAsync(id));
 
     /// <summary>
-    /// Создать событие
+    /// Создать событие (доступно только сотруднику)
     /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
@@ -75,7 +75,7 @@ public class EventsController(IEventService service) : ControllerBase
     }
 
     /// <summary>
-    /// Обновить событие
+    /// Обновить событие (доступно только сотруднику)
     /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
@@ -86,7 +86,7 @@ public class EventsController(IEventService service) : ControllerBase
     }
 
     /// <summary>
-    /// Удалить событие
+    /// Удалить событие (доступно только сотруднику)
     /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]
