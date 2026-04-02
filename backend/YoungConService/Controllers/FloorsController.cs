@@ -9,11 +9,17 @@ namespace YoungConService.Controllers;
 [Route("api/floors")]
 public class FloorsController(IFloorService service) : ControllerBase
 {
+    /// <summary>
+    /// Получить список этажей
+    /// </summary>
     [HttpGet]
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<FloorDTO>>> GetAll()
         => Ok(await service.GetAllAsync());
 
+    /// <summary>
+    /// Получить этаж по идентификатору
+    /// </summary>
     [HttpGet("{id}")]
     [AllowAnonymous]
     public async Task<ActionResult<FloorDTO>> GetById(Guid id)
@@ -22,6 +28,9 @@ public class FloorsController(IFloorService service) : ControllerBase
         return floor == null ? NotFound() : Ok(floor);
     }
 
+    /// <summary>
+    /// Создать этаж
+    /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
     public async Task<ActionResult<FloorDTO>> Create([FromBody] CreateFloorRequest request)
@@ -30,6 +39,9 @@ public class FloorsController(IFloorService service) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
 
+    /// <summary>
+    /// Обновить этаж
+    /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
     public async Task<ActionResult<FloorDTO>> Update(Guid id, [FromBody] UpdateFloorRequest request)
@@ -38,6 +50,9 @@ public class FloorsController(IFloorService service) : ControllerBase
         return updated == null ? NotFound() : Ok(updated);
     }
 
+    /// <summary>
+    /// Удалить этаж
+    /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]
     public async Task<IActionResult> Delete(Guid id)

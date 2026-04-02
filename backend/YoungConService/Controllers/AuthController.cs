@@ -14,6 +14,9 @@ namespace YoungConService.Controllers;
 [Route("api/auth")]
 public class AuthController(YoungConDbContext db, AuthService authService) : ControllerBase
 {
+    /// <summary>
+    /// Авторизация пользователя по почте и паролю
+    /// </summary>
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
@@ -38,6 +41,9 @@ public class AuthController(YoungConDbContext db, AuthService authService) : Con
         return Ok(new { token });
     }
 
+    /// <summary>
+    /// Выход пользователя из системы и добавление токена в blacklist
+    /// </summary>
     [HttpPost("logout")]
     [Authorize]
     public async Task<IActionResult> Logout()

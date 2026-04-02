@@ -1,11 +1,21 @@
 using YoungConService.DTOs.Events;
+using YoungConService.Infrastructure.Auth;
+using YoungConService.Infrastructure.Errors.Exceptions;
 using YoungConService.Infrastructure.Mappers;
+using YoungConService.Infrastructure.Repositories;
 using YoungConService.Repositories.Events;
 
 namespace YoungConService.Services.Events.Event;
 
-public class EventService(IConEventRepository repository, ISpeakerRepository speakerRepository) : IEventService
+public class EventService(
+    IConEventRepository repository,
+    ISpeakerRepository speakerRepository,
+    IUserRepository userRepository,
+    ICurrentUser currentUser) : IEventService
 {
+    private readonly IUserRepository _userRepository = userRepository;
+    private readonly ICurrentUser _currentUser = currentUser;
+
     public async Task<EventDTO?> GetByIdAsync(Guid id)
     {
         var entity = await repository.GetByIdAsync(id);
@@ -26,6 +36,44 @@ public class EventService(IConEventRepository repository, ISpeakerRepository spe
         {
             EventId = eventId,
             Speakers = speakers.Select(s => s.ToEventSpeakerDto()).ToArray()
+        };
+    }
+
+    public async Task<EventLikeDTO> ToggleLikeAsync(Guid eventId)
+    {
+        var userId = _currentUser.GetUserId();
+        var user = await _userRepository.GetByIdWithLikedEventsAsync(userId);
+
+        if (user == null)
+        {
+            throw new NotFoundException("Пользователь не найден");
+        }
+
+        var eventEntity = await repository.GetByIdAsync(eventId);
+        if (eventEntity == null)
+        {
+            throw new NotFoundException("Событие не найдено");
+        }
+
+        var likedEvent = user.LikedEvents.FirstOrDefault(e => e.Id == eventId);
+        var isLiked = likedEvent == null;
+
+        if (isLiked)
+        {
+            user.LikedEvents.Add(eventEntity);
+        }
+        else
+        {
+            user.LikedEvents.Remove(likedEvent!);
+        }
+
+        await _userRepository.UpdateAsync(user);
+
+        return new EventLikeDTO
+        {
+            EventId = eventId,
+            UserId = userId,
+            IsLiked = isLiked
         };
     }
 

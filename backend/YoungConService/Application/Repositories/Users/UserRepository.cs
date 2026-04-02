@@ -10,6 +10,13 @@ public class UserRepository(YoungConDbContext db) : IUserRepository
     {
         return await db.Users.FindAsync(id);
     }
+
+    public async Task<User?> GetByIdWithLikedEventsAsync(Guid id)
+    {
+        return await db.Users
+            .Include(u => u.LikedEvents)
+            .FirstOrDefaultAsync(u => u.Id == id);
+    }
     
     public async Task<User?> GetByEmailAsync(string email)
     {

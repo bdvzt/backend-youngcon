@@ -6,6 +6,7 @@ namespace YoungConService.Infrastructure.Repositories;
 public interface IUserRepository
 {
     Task<User?> GetByIdAsync(Guid id);
+    Task<User?> GetByIdWithLikedEventsAsync(Guid id);
     Task<User?> GetByEmailAsync(string email);
     Task<IReadOnlyCollection<Achievment>> GetAchievmentsByUserIdAsync(Guid userId);
     Task<IReadOnlyCollection<Event>> GetLikedEventsByUserIdAsync(Guid userId);

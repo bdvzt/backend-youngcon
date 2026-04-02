@@ -9,11 +9,17 @@ namespace YoungConService.Controllers;
 [Route("api/festivals")]
 public class FestivalsController(IFestivalService service) : ControllerBase
 {
+    /// <summary>
+    /// Получить список фестивалей
+    /// </summary>
     [HttpGet]
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<FestivalDTO>>> GetAll()
         => Ok(await service.GetAllAsync());
     
+    /// <summary>
+    /// Получить последний фестиваль
+    /// </summary>
     [HttpGet("last")]
     public async Task<IActionResult> GetLast()
     {
@@ -25,6 +31,9 @@ public class FestivalsController(IFestivalService service) : ControllerBase
         return Ok(festival);
     }
 
+    /// <summary>
+    /// Получить фестиваль по идентификатору
+    /// </summary>
     [HttpGet("{id}")]
     [AllowAnonymous]
     public async Task<ActionResult<FestivalDTO>> GetById(Guid id)
@@ -33,6 +42,9 @@ public class FestivalsController(IFestivalService service) : ControllerBase
         return festival == null ? NotFound() : Ok(festival);
     }
 
+    /// <summary>
+    /// Создать фестиваль
+    /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
     public async Task<ActionResult<FestivalDTO>> Create([FromBody] CreateFestivalRequest request)
@@ -41,6 +53,9 @@ public class FestivalsController(IFestivalService service) : ControllerBase
         return Ok(created);
     }
 
+    /// <summary>
+    /// Обновить фестиваль
+    /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
     public async Task<ActionResult<FestivalDTO>> Update(Guid id, [FromBody] UpdateFestivalRequest request)
@@ -49,6 +64,9 @@ public class FestivalsController(IFestivalService service) : ControllerBase
         return updated == null ? NotFound() : Ok(updated);
     }
 
+    /// <summary>
+    /// Удалить фестиваль
+    /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]
     public async Task<IActionResult> Delete(Guid id)

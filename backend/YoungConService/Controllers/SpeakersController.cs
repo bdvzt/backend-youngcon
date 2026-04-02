@@ -9,11 +9,17 @@ namespace YoungConService.Controllers;
 [Route("api/speakers")]
 public class SpeakersController(ISpeakerService service) : ControllerBase
 {
+    /// <summary>
+    /// Получить список спикеров
+    /// </summary>
     [HttpGet]
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<SpeakerDTO>>> GetAll()
         => Ok(await service.GetAllAsync());
 
+    /// <summary>
+    /// Получить спикера по идентификатору
+    /// </summary>
     [HttpGet("{id}")]
     [AllowAnonymous]
     public async Task<ActionResult<SpeakerDTO>> GetById(Guid id)
@@ -22,6 +28,9 @@ public class SpeakersController(ISpeakerService service) : ControllerBase
         return speaker == null ? NotFound() : Ok(speaker);
     }
 
+    /// <summary>
+    /// Создать спикера
+    /// </summary>
     [HttpPost]
     [Authorize(Roles = "Employee")]
     public async Task<ActionResult<SpeakerDTO>> Create([FromBody] CreateSpeakerRequest request)
@@ -30,6 +39,9 @@ public class SpeakersController(ISpeakerService service) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
 
+    /// <summary>
+    /// Обновить спикера
+    /// </summary>
     [HttpPut("{id}")]
     [Authorize(Roles = "Employee")]
     public async Task<ActionResult<SpeakerDTO>> Update(Guid id, [FromBody] UpdateSpeakerRequest request)
@@ -38,6 +50,9 @@ public class SpeakersController(ISpeakerService service) : ControllerBase
         return updated == null ? NotFound() : Ok(updated);
     }
 
+    /// <summary>
+    /// Удалить спикера
+    /// </summary>
     [HttpDelete("{id}")]
     [Authorize(Roles = "Employee")]
     public async Task<IActionResult> Delete(Guid id)
