@@ -17,6 +17,23 @@ public class UserRepository(YoungConDbContext db) : IUserRepository
             .Include(u => u.LikedEvents)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
+
+    public async Task<User?> GetByIdWithAchievmentsAsync(Guid id)
+    {
+        return await db.Users
+            .Include(u => u.Achievments)
+            .FirstOrDefaultAsync(u => u.Id == id);
+    }
+
+    public async Task<User?> GetByQrCodeAsync(string qrCode)
+    {
+        return await db.Users.FirstOrDefaultAsync(u => u.QrCode == qrCode);
+    }
+
+    public async Task<Achievment?> GetAchievmentByIdAsync(Guid achievmentId)
+    {
+        return await db.Achievments.FirstOrDefaultAsync(a => a.Id == achievmentId);
+    }
     
     public async Task<User?> GetByEmailAsync(string email)
     {

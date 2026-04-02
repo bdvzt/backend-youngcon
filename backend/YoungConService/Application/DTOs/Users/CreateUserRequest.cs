@@ -24,11 +24,9 @@ public class CreateUserRequest
     [DefaultValue("user@example.com")]
     public required string Email { get; set; } 
     
-    [Required(ErrorMessage = "QR код обязателен")]
-    [MinLength(5, ErrorMessage = "QR код должен быть не менее 5 символов")]
     [MaxLength(255, ErrorMessage = "QR код не может быть длиннее 255 символов")]
-    [DefaultValue("QR001")]
-    public required string QrCode { get; set; }
+    [DefaultValue(null)]
+    public string? QrCode { get; set; }
     
     [DefaultValue(0)]
     public Major Major { get; set; }

@@ -149,6 +149,16 @@
             Получить информацию о пользователе
             </summary>
         </member>
+        <member name="M:YoungConService.Controllers.UsersController.ResolveByQr(YoungConService.DTOs.Users.ResolveUserByQrRequest)">
+            <summary>
+            Считать QR и получить пользователя (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.AssignAchievementByQr(YoungConService.DTOs.Users.AssignAchievmentByQrRequest)">
+            <summary>
+            Выдать ачивку пользователю по QR (доступно только сотруднику)
+            </summary>
+        </member>
         <member name="M:YoungConService.Controllers.UsersController.GetAchievements(System.Guid)">
             <summary>
             Получить ачивки пользователя
@@ -162,6 +172,11 @@
         <member name="M:YoungConService.Controllers.UsersController.GetMyself">
             <summary>
             Получить информацию о себе
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetMyQrCode">
+            <summary>
+            Получить QR строку текущего пользователя
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.UsersController.GetAll(YoungConService.DTOs.Users.PagedRequest)">
