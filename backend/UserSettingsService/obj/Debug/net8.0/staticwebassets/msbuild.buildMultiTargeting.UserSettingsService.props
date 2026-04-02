@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/UserSettingsService.props" />
-</Project>

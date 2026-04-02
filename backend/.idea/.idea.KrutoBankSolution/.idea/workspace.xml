@@ -11,16 +11,59 @@
     <projectFile profileName="https">UserSettingsService/UserSettingsService.csproj</projectFile>
     <projectFile profileName="http">UsersService/UsersService.csproj</projectFile>
     <projectFile profileName="https">UsersService/UsersService.csproj</projectFile>
+    <projectFile profileName="http">YoungConService/YoungConService.csproj</projectFile>
+    <projectFile profileName="https">YoungConService/YoungConService.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="654e1c12-e02c-4c91-8636-7bf66d2a8949" name="Changes" comment="" />
+    <list default="true" id="654e1c12-e02c-4c91-8636-7bf66d2a8949" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KrutoBankSolution/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrutoBankSolution.sln" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConSolution.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Application/Data/YoungConDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Application/Data/YoungConDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Application/Repositories/Festival/FestivalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Application/Repositories/Festival/FestivalRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Application/Repositories/Festival/IFestivalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Application/Repositories/Festival/IFestivalRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Application/Services/Festival/FestivalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Application/Services/Festival/FestivalService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Application/Services/Festival/IFestivalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Application/Services/Festival/IFestivalService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Controllers/FestivalsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Controllers/FestivalsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Infrastructure/Mappers/FestivalMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Infrastructure/Mappers/FestivalMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Migrations/YoungConDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Migrations/YoungConDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/UsersService.http" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/UsersService.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/bin/Debug/net8.0/YoungConService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/bin/Debug/net8.0/YoungConService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/bin/Debug/net8.0/YoungConService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/bin/Debug/net8.0/YoungConService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/bin/Debug/net8.0/YoungConService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/bin/Debug/net8.0/YoungConService.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/YoungConService.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/ref/YoungConService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/ref/YoungConService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/refint/YoungConService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/Debug/net8.0/refint/YoungConService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/YoungConService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/YoungConService.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YoungConService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/YoungConService/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/bdvzt/Desktop/YoungConBackend/backend" value="3BJBXgIiKRqDCfGPrwfkOaRLrKJ" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
@@ -36,14 +79,18 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/dilyarashh/KrutoBank&quot;,
+    &quot;url&quot;: &quot;https://github.com/bdvzt/backend-youngcon.git&quot;,
     &quot;accountId&quot;: &quot;ac5a55f2-1001-44ff-b9d0-abf0c2f52086&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3BJBXgIiKRqDCfGPrwfkOaRLrKJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,6 +98,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.UsersService: http.executor": "Run",
+    ".NET Launch Settings Profile.YoungConService: http.executor": "Run",
+    ".NET Launch Settings Profile.YoungConService: https.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -60,10 +109,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.UsersService: http">
+  <component name="RunManager" selected=".NET Launch Settings Profile.YoungConService: http">
     <configuration name="AccountsService: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AccountsService/AccountsService.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -214,6 +264,36 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="YoungConService: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/YoungConService/YoungConService.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="http" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="YoungConService: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/YoungConService/YoungConService.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="https" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -225,13 +305,19 @@
       <workItem from="1774197336570" duration="17000" />
       <workItem from="1774960153894" duration="1144000" />
       <workItem from="1774965947332" duration="150000" />
-      <workItem from="1774966145321" duration="1735000" />
+      <workItem from="1774966145321" duration="12057000" />
+      <workItem from="1775029661099" duration="12388000" />
+      <workItem from="1775060078742" duration="5875000" />
+      <workItem from="1775066490804" duration="1472000" />
+      <workItem from="1775067995162" duration="858000" />
+      <workItem from="1775068897292" duration="3663000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -253,5 +339,17 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

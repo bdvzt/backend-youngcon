@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YoungConService</name>
+    </assembly>
+    <members>
+        <member name="M:YoungConService.Controllers.AuthController.Login(YoungConService.DTOs.Users.LoginRequest)">
+            <summary>
+            Авторизация пользователя по почте и паролю
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.AuthController.Logout">
+            <summary>
+            Выход пользователя из системы и добавление токена в blacklist
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.GetById(System.Guid)">
+            <summary>
+            Получить событие по идентификатору
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.GetSpeakersByEventId(System.Guid)">
+            <summary>
+            Получить список спикеров события
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.GetByFestivalId(System.Guid)">
+            <summary>
+            Получить события фестиваля
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.GetByZoneId(System.Guid)">
+            <summary>
+            Получить события зоны
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.GetBySpeakerId(System.Guid)">
+            <summary>
+            Получить события спикера
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.ToggleLike(System.Guid)">
+            <summary>
+            Поставить или снять лайк у события для текущего пользователя
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.Create(YoungConService.DTOs.Events.CreateEventRequest)">
+            <summary>
+            Создать событие
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.Update(System.Guid,YoungConService.DTOs.Events.UpdateEventRequest)">
+            <summary>
+            Обновить событие
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.EventsController.Delete(System.Guid)">
+            <summary>
+            Удалить событие
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FestivalsController.GetAll">
+            <summary>
+            Получить список фестивалей
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FestivalsController.GetLast">
+            <summary>
+            Получить последний фестиваль
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FestivalsController.GetById(System.Guid)">
+            <summary>
+            Получить фестиваль по идентификатору
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FestivalsController.Create(YoungConService.DTOs.Festivals.CreateFestivalRequest)">
+            <summary>
+            Создать фестиваль
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FestivalsController.Update(System.Guid,YoungConService.DTOs.Festivals.UpdateFestivalRequest)">
+            <summary>
+            Обновить фестиваль
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FestivalsController.Delete(System.Guid)">
+            <summary>
+            Удалить фестиваль
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FloorsController.GetAll">
+            <summary>
+            Получить список этажей
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FloorsController.GetById(System.Guid)">
+            <summary>
+            Получить этаж по идентификатору
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FloorsController.Create(YoungConService.DTOs.Floors.CreateFloorRequest)">
+            <summary>
+            Создать этаж
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FloorsController.Update(System.Guid,YoungConService.DTOs.Floors.UpdateFloorRequest)">
+            <summary>
+            Обновить этаж
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.FloorsController.Delete(System.Guid)">
+            <summary>
+            Удалить этаж
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.SpeakersController.GetAll">
+            <summary>
+            Получить список спикеров
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.SpeakersController.GetById(System.Guid)">
+            <summary>
+            Получить спикера по идентификатору
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.SpeakersController.Create(YoungConService.DTOs.Speakers.CreateSpeakerRequest)">
+            <summary>
+            Создать спикера
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.SpeakersController.Update(System.Guid,YoungConService.DTOs.Speakers.UpdateSpeakerRequest)">
+            <summary>
+            Обновить спикера
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.SpeakersController.Delete(System.Guid)">
+            <summary>
+            Удалить спикера
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.Create(YoungConService.DTOs.Users.CreateUserRequest)">
+            <summary>
+            Создать пользователя (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.Get(System.Guid)">
+            <summary>
+            Получить информацию о пользователе
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.ResolveByQr(YoungConService.DTOs.Users.ResolveUserByQrRequest)">
+            <summary>
+            Считать QR и получить пользователя (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.AssignAchievementByQr(YoungConService.DTOs.Users.AssignAchievmentByQrRequest)">
+            <summary>
+            Выдать ачивку пользователю по QR (доступно только сотруднику)
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetAchievements(System.Guid)">
+            <summary>
+            Получить ачивки пользователя
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetLikedEvents(System.Guid)">
+            <summary>
+            Получить лайкнутые события пользователя
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetMyself">
+            <summary>
+            Получить информацию о себе
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetMyQrCode">
+            <summary>
+            Получить QR строку текущего пользователя
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetAll(YoungConService.DTOs.Users.PagedRequest)">
+            <summary>
+            Получить информацию о пользователях
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.ZonesController.GetAll">
+            <summary>
+            Получить список зон
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.ZonesController.GetById(System.Guid)">
+            <summary>
+            Получить зону по идентификатору
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.ZonesController.GetByFloorId(System.Guid)">
+            <summary>
+            Получить зоны по идентификатору этажа
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.ZonesController.Create(YoungConService.DTOs.Zones.CreateZoneRequest)">
+            <summary>
+            Создать зону
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.ZonesController.Update(System.Guid,YoungConService.DTOs.Zones.UpdateZoneRequest)">
+            <summary>
+            Обновить зону
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.ZonesController.Delete(System.Guid)">
+            <summary>
+            Удалить зону
+            </summary>
+        </member>
+        <member name="T:YoungConService.Migrations.RefreshSeedData">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.RefreshSeedData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.RefreshSeedData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.RefreshSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
