@@ -5,7 +5,7 @@ namespace YoungConService.Services.Events.Event;
 public interface IEventService
 {
     Task<EventDTO?> GetByIdAsync(Guid id);
-    Task<IEnumerable<EventDTO>> GetAllAsync();
+    Task<EventSpeakersDTO?> GetSpeakersByEventIdAsync(Guid eventId);
     Task<IEnumerable<EventDTO>> GetByFestivalIdAsync(Guid festivalId);
     Task<IEnumerable<EventDTO>> GetByZoneIdAsync(Guid zoneId);
     Task<IEnumerable<EventDTO>> GetBySpeakerIdAsync(Guid speakerId);

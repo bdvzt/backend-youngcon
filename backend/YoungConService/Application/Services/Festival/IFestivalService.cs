@@ -9,5 +9,6 @@ public interface IFestivalService
     Task<FestivalDTO> CreateAsync(CreateFestivalRequest request);
     Task<FestivalDTO?> UpdateAsync(Guid id, UpdateFestivalRequest request);
     Task<bool> DeleteAsync(Guid id);
+    Task<FestivalDTO?> GetLastAsync();
 }
 

@@ -9,6 +9,19 @@ public class SpeakerRepository(YoungConDbContext db) : ISpeakerRepository
     public async Task<Speaker?> GetByIdAsync(Guid id)
         => await db.Speakers.Include(s => s.Events).FirstOrDefaultAsync(s => s.Id == id);
 
+    public async Task<IReadOnlyCollection<Speaker>> GetByIdsAsync(IEnumerable<Guid> ids)
+    {
+        var speakerIds = ids.Distinct().ToArray();
+        if (speakerIds.Length == 0)
+        {
+            return [];
+        }
+
+        return await db.Speakers
+            .Where(s => speakerIds.Contains(s.Id))
+            .ToListAsync();
+    }
+
     public async Task<IEnumerable<Speaker>> GetAllAsync()
         => await db.Speakers.Include(s => s.Events).OrderBy(s => s.FullName).ToListAsync();
 

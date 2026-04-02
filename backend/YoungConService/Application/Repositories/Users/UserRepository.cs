@@ -16,6 +16,23 @@ public class UserRepository(YoungConDbContext db) : IUserRepository
         return await db.Users.FirstOrDefaultAsync(u => u.Email == email);
     }
 
+    public async Task<IReadOnlyCollection<Achievment>> GetAchievmentsByUserIdAsync(Guid userId)
+    {
+        return await db.Users
+            .Where(u => u.Id == userId)
+            .SelectMany(u => u.Achievments)
+            .ToListAsync();
+    }
+
+    public async Task<IReadOnlyCollection<Event>> GetLikedEventsByUserIdAsync(Guid userId)
+    {
+        return await db.Users
+            .Where(u => u.Id == userId)
+            .SelectMany(u => u.LikedEvents)
+            .Include(e => e.Speakers)
+            .ToListAsync();
+    }
+
     public async Task<(IEnumerable<User> Users, int TotalCount)> GetAllAsync(
         int page, int pageSize, UserSortOption? sortBy = null, bool ascending = true)
     {

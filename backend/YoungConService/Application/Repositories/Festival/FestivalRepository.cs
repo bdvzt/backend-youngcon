@@ -9,11 +9,23 @@ public class FestivalRepository(YoungConDbContext db) : IFestivalRepository
     public async Task<Festival?> GetByIdAsync(Guid id)
         => await db.Festivals.FirstOrDefaultAsync(f => f.Id == id);
 
+    public async Task<Festival?> GetLastAsync()
+    {
+        return await db.Festivals
+            .OrderByDescending(f => f.StartDateTime)
+            .FirstOrDefaultAsync();
+    }
+    
     public async Task<IEnumerable<Festival>> GetAllAsync()
         => await db.Festivals.OrderBy(f => f.StartDateTime).ToListAsync();
 
     public async Task<Festival> CreateAsync(Festival festival)
     {
+        if (festival.Id == Guid.Empty)
+        {
+            festival.Id = Guid.NewGuid();
+        }
+
         db.Festivals.Add(festival);
         await db.SaveChangesAsync();
         return festival;

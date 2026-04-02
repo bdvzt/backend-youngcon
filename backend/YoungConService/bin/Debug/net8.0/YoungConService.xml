@@ -14,6 +14,16 @@
             Получить информацию о пользователе
             </summary>
         </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetAchievements(System.Guid)">
+            <summary>
+            Получить ачивки пользователя
+            </summary>
+        </member>
+        <member name="M:YoungConService.Controllers.UsersController.GetLikedEvents(System.Guid)">
+            <summary>
+            Получить лайкнутые события пользователя
+            </summary>
+        </member>
         <member name="M:YoungConService.Controllers.UsersController.GetMyself">
             <summary>
             Получить информацию о себе
@@ -24,16 +34,16 @@
             Получить информацию о пользователях
             </summary>
         </member>
-        <member name="T:YoungConService.Migrations.InitialCreate">
+        <member name="T:YoungConService.Migrations.RefreshSeedData">
             <inheritdoc />
         </member>
-        <member name="M:YoungConService.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:YoungConService.Migrations.RefreshSeedData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:YoungConService.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:YoungConService.Migrations.RefreshSeedData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:YoungConService.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:YoungConService.Migrations.RefreshSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

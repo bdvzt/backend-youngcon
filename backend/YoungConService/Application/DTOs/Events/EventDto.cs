@@ -1,4 +1,3 @@
-using YoungConService.DTOs.Speakers;
 namespace YoungConService.DTOs.Events;
 public class EventDTO
 {
@@ -10,5 +9,4 @@ public class EventDTO
     public required string Category { get; set; }
     public required Guid ZoneId { get; set; }
     public required Guid FestivalId { get; set; }
-    public SpeakerDTO? Speaker { get; set; }
 }

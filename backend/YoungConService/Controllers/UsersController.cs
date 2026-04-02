@@ -33,6 +33,30 @@ public class UsersController(IUserService service) : ControllerBase
         var user = await service.GetById(id);
         return Ok(user);
     }
+
+    /// <summary>
+    /// Получить ачивки пользователя
+    /// </summary>
+    [Authorize]
+    [HttpGet("{id}/achievements")]
+    [ProducesResponseType(typeof(UserAchievmentsDto), 200)]
+    public async Task<ActionResult<UserAchievmentsDto>> GetAchievements(Guid id)
+    {
+        var achievements = await service.GetAchievmentsByUserId(id);
+        return Ok(achievements);
+    }
+
+    /// <summary>
+    /// Получить лайкнутые события пользователя
+    /// </summary>
+    [Authorize]
+    [HttpGet("{id}/liked-events")]
+    [ProducesResponseType(typeof(UserLikedEventsDto), 200)]
+    public async Task<ActionResult<UserLikedEventsDto>> GetLikedEvents(Guid id)
+    {
+        var likedEvents = await service.GetLikedEventsByUserId(id);
+        return Ok(likedEvents);
+    }
     
     /// <summary>
     /// Получить информацию о себе

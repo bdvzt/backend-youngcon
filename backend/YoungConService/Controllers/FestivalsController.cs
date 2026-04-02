@@ -13,6 +13,17 @@ public class FestivalsController(IFestivalService service) : ControllerBase
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<FestivalDTO>>> GetAll()
         => Ok(await service.GetAllAsync());
+    
+    [HttpGet("last")]
+    public async Task<IActionResult> GetLast()
+    {
+        var festival = await service.GetLastAsync();
+
+        if (festival == null)
+            return NotFound();
+
+        return Ok(festival);
+    }
 
     [HttpGet("{id}")]
     [AllowAnonymous]
@@ -27,7 +38,7 @@ public class FestivalsController(IFestivalService service) : ControllerBase
     public async Task<ActionResult<FestivalDTO>> Create([FromBody] CreateFestivalRequest request)
     {
         var created = await service.CreateAsync(request);
-        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+        return Ok(created);
     }
 
     [HttpPut("{id}")]

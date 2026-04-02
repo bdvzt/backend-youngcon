@@ -73,6 +73,52 @@ public class UserService(
         return user.ToDto();
     }
 
+    public async Task<UserAchievmentsDto> GetAchievmentsByUserId(Guid id)
+    {
+        if (_currentUser.GetRole() != UserRole.Employee && _currentUser.GetUserId() != id)
+        {
+            throw new BadRequestException("Вам не доступна информация об этом пользователе");
+        }
+
+        var user = await _userRepository.GetByIdAsync(id);
+
+        if (user == null)
+        {
+            throw new NotFoundException("Пользователя не существует");
+        }
+
+        var achievments = await _userRepository.GetAchievmentsByUserIdAsync(id);
+
+        return new UserAchievmentsDto
+        {
+            UserId = id,
+            Achievments = achievments.ToDto()
+        };
+    }
+
+    public async Task<UserLikedEventsDto> GetLikedEventsByUserId(Guid id)
+    {
+        if (_currentUser.GetRole() != UserRole.Employee && _currentUser.GetUserId() != id)
+        {
+            throw new BadRequestException("Вам не доступна информация об этом пользователе");
+        }
+
+        var user = await _userRepository.GetByIdAsync(id);
+
+        if (user == null)
+        {
+            throw new NotFoundException("Пользователя не существует");
+        }
+
+        var likedEvents = await _userRepository.GetLikedEventsByUserIdAsync(id);
+
+        return new UserLikedEventsDto
+        {
+            UserId = id,
+            LikedEvents = likedEvents.Select(e => e.ToDto()).ToArray()
+        };
+    }
+
     public async Task<UserDto?> GetMyself()
     {
         var userId = _currentUser.GetUserId();

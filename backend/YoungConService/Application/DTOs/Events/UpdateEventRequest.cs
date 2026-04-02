@@ -21,5 +21,5 @@ public class UpdateEventRequest
     
     public Guid? ZoneId { get; set; }
     public Guid? FestivalId { get; set; }
-    public Guid? SpeakerId { get; set; }
+    public Guid[]? SpeakerIds { get; set; }
 }

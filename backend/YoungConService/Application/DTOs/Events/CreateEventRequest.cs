@@ -31,5 +31,5 @@ public class CreateEventRequest
     [Required(ErrorMessage = "FestivalId обязателен")]
     public required Guid FestivalId { get; set; }
     
-    public Guid? SpeakerId { get; set; }
+    public Guid[] SpeakerIds { get; set; } = [];
 }

@@ -5,6 +5,7 @@ namespace YoungConService.Repositories.Events;
 public interface IConEventRepository
 {
     Task<Event?> GetByIdAsync(Guid id);
+    Task<IReadOnlyCollection<Speaker>> GetSpeakersByEventIdAsync(Guid eventId);
     Task<IEnumerable<Event>> GetAllAsync();
     Task<IEnumerable<Event>> GetByFestivalIdAsync(Guid festivalId);
     Task<IEnumerable<Event>> GetByZoneIdAsync(Guid zoneId);

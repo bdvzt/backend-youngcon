@@ -12,8 +12,22 @@ public class EventService(IConEventRepository repository, ISpeakerRepository spe
         return entity?.ToDto();
     }
 
-    public async Task<IEnumerable<EventDTO>> GetAllAsync()
-        => (await repository.GetAllAsync()).Select(e => e.ToDto());
+    public async Task<EventSpeakersDTO?> GetSpeakersByEventIdAsync(Guid eventId)
+    {
+        var entity = await repository.GetByIdAsync(eventId);
+        if (entity == null)
+        {
+            return null;
+        }
+
+        var speakers = await repository.GetSpeakersByEventIdAsync(eventId);
+
+        return new EventSpeakersDTO
+        {
+            EventId = eventId,
+            Speakers = speakers.Select(s => s.ToEventSpeakerDto()).ToArray()
+        };
+    }
 
     public async Task<IEnumerable<EventDTO>> GetByFestivalIdAsync(Guid festivalId)
         => (await repository.GetByFestivalIdAsync(festivalId)).Select(e => e.ToDto());
@@ -26,11 +40,8 @@ public class EventService(IConEventRepository repository, ISpeakerRepository spe
 
     public async Task<EventDTO> CreateAsync(CreateEventRequest request)
     {
-        YoungConService.Domain.Entities.Speaker? speaker = null;
-        if (request.SpeakerId.HasValue)
-        {
-            speaker = await speakerRepository.GetByIdAsync(request.SpeakerId.Value);
-        }
+        var speakerIds = request.SpeakerIds.Distinct().ToArray();
+        var speakers = await speakerRepository.GetByIdsAsync(speakerIds);
 
         var entity = new YoungConService.Domain.Entities.Event
         {
@@ -42,8 +53,7 @@ public class EventService(IConEventRepository repository, ISpeakerRepository spe
             Category = request.Category,
             ZoneId = request.ZoneId,
             FestivalId = request.FestivalId,
-            Speaker = speaker,
-            SpeakerId = speaker?.Id
+            Speakers = speakers.ToArray()
         };
 
         var created = await repository.CreateAsync(entity);
@@ -63,11 +73,10 @@ public class EventService(IConEventRepository repository, ISpeakerRepository spe
         if (request.ZoneId.HasValue) existing.ZoneId = request.ZoneId.Value;
         if (request.FestivalId.HasValue) existing.FestivalId = request.FestivalId.Value;
 
-        if (request.SpeakerId.HasValue)
+        if (request.SpeakerIds != null)
         {
-            var speaker = await speakerRepository.GetByIdAsync(request.SpeakerId.Value);
-            existing.Speaker = speaker;
-            existing.SpeakerId = speaker?.Id;
+            var speakers = await speakerRepository.GetByIdsAsync(request.SpeakerIds);
+            existing.Speakers = speakers.ToArray();
         }
 
         var updated = await repository.UpdateAsync(existing);

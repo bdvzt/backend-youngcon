@@ -8,41 +8,36 @@ public class ConEventRepository(YoungConDbContext db) : IConEventRepository
 {
     public async Task<Event?> GetByIdAsync(Guid id)
         => await db.Events
-            .Include(e => e.Zone)
-            .Include(e => e.Festival)
-            .Include(e => e.Speaker)
+            .Include(e => e.Speakers)
             .FirstOrDefaultAsync(e => e.Id == id);
+
+    public async Task<IReadOnlyCollection<Speaker>> GetSpeakersByEventIdAsync(Guid eventId)
+        => await db.Events
+            .Where(e => e.Id == eventId)
+            .SelectMany(e => e.Speakers)
+            .OrderBy(s => s.FullName)
+            .ToListAsync();
 
     public async Task<IEnumerable<Event>> GetAllAsync()
         => await db.Events
-            .Include(e => e.Zone)
-            .Include(e => e.Festival)
-            .Include(e => e.Speaker)
             .OrderBy(e => e.StartDateTime)
             .ToListAsync();
 
     public async Task<IEnumerable<Event>> GetByFestivalIdAsync(Guid festivalId)
         => await db.Events
             .Where(e => e.FestivalId == festivalId)
-            .Include(e => e.Zone)
-            .Include(e => e.Speaker)
             .OrderBy(e => e.StartDateTime)
             .ToListAsync();
 
     public async Task<IEnumerable<Event>> GetByZoneIdAsync(Guid zoneId)
         => await db.Events
             .Where(e => e.ZoneId == zoneId)
-            .Include(e => e.Festival)
-            .Include(e => e.Speaker)
             .OrderBy(e => e.StartDateTime)
             .ToListAsync();
 
     public async Task<IEnumerable<Event>> GetBySpeakerIdAsync(Guid speakerId)
         => await db.Events
-            .Where(e => e.Speaker != null && e.Speaker.Id == speakerId)
-            .Include(e => e.Zone)
-            .Include(e => e.Festival)
-            .Include(e => e.Speaker)
+            .Where(e => e.Speakers.Any(s => s.Id == speakerId))
             .OrderBy(e => e.StartDateTime)
             .ToListAsync();
 
@@ -55,11 +50,11 @@ public class ConEventRepository(YoungConDbContext db) : IConEventRepository
 
     public async Task<Event?> UpdateAsync(Event @event)
     {
-        var existing = await db.Events.FindAsync(@event.Id);
-        if (existing == null) return null;
-        db.Entry(existing).CurrentValues.SetValues(@event);
+        var exists = await db.Events.AnyAsync(e => e.Id == @event.Id);
+        if (!exists) return null;
+
         await db.SaveChangesAsync();
-        return existing;
+        return @event;
     }
 
     public async Task<bool> DeleteAsync(Guid id)

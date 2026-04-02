@@ -1,6 +1,4 @@
 using YoungConService.Domain.Entities;
-using YoungConService.DTOs;
-using YoungConService.DTOs.Events;
 using YoungConService.DTOs.Festivals;
 
 namespace YoungConService.Infrastructure.Mappers;

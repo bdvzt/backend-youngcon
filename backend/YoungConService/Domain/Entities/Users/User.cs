@@ -1,4 +1,5 @@
 using YoungConService.Domain.Enums;
+using System.Text.Json.Serialization;
 
 namespace YoungConService.Domain.Entities;
 
@@ -10,7 +11,9 @@ public class User
     public required string Email { get; set; }
     public required string QrCode { get; set; }
     public required Major Major { get; set; }
+    [JsonIgnore]
     public ICollection<Achievment> Achievments { get; set; } = [];
+    [JsonIgnore]
     public ICollection<Event> LikedEvents { get; set; } = [];
     public required string HashPassword { get; set; }
     public UserRole Role { get; set; }

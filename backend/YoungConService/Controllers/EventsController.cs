@@ -9,17 +9,20 @@ namespace YoungConService.Controllers;
 [Route("api/events")]
 public class EventsController(IEventService service) : ControllerBase
 {
-    [HttpGet]
-    [AllowAnonymous]
-    public async Task<ActionResult<IEnumerable<EventDTO>>> GetAll()
-        => Ok(await service.GetAllAsync());
-
     [HttpGet("{id}")]
     [AllowAnonymous]
     public async Task<ActionResult<EventDTO>> GetById(Guid id)
     {
         var @event = await service.GetByIdAsync(id);
         return @event == null ? NotFound() : Ok(@event);
+    }
+
+    [HttpGet("{id}/speakers")]
+    [AllowAnonymous]
+    public async Task<ActionResult<EventSpeakersDTO>> GetSpeakersByEventId(Guid id)
+    {
+        var speakers = await service.GetSpeakersByEventIdAsync(id);
+        return speakers == null ? NotFound() : Ok(speakers);
     }
 
     [HttpGet("by-festival/{festivalId}")]
