@@ -7,20 +7,21 @@ namespace YoungConService.Controllers;
 
 [ApiController]
 [Route("api/achievements")]
-[Authorize(Roles = "Employee")]
 public class AchievementsController(IAchievmentService service) : ControllerBase
 {
     /// <summary>
     /// Получить список ачивок
     /// </summary>
     [HttpGet]
+    [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<AchievmentDTO>>> GetAll()
         => Ok(await service.GetAllAsync());
 
     /// <summary>
-    /// Получить ачивку по идентификатору
+    /// Получить ачивку по идентификатору ,,
     /// </summary>
     [HttpGet("{id}")]
+    [AllowAnonymous]
     public async Task<ActionResult<AchievmentDTO>> GetById(Guid id)
     {
         var achievment = await service.GetByIdAsync(id);
@@ -31,6 +32,7 @@ public class AchievementsController(IAchievmentService service) : ControllerBase
     /// Создать ачивку (доступно только сотруднику)
     /// </summary>
     [HttpPost]
+    [Authorize(Roles = "Employee")]
     public async Task<ActionResult<AchievmentDTO>> Create([FromBody] CreateAchievmentRequest request)
     {
         var created = await service.CreateAsync(request);
@@ -41,6 +43,7 @@ public class AchievementsController(IAchievmentService service) : ControllerBase
     /// Обновить ачивку (доступно только сотруднику)
     /// </summary>
     [HttpPut("{id}")]
+    [Authorize(Roles = "Employee")]
     public async Task<ActionResult<AchievmentDTO>> Update(Guid id, [FromBody] UpdateAchievmentRequest request)
     {
         var updated = await service.UpdateAsync(id, request);
@@ -51,6 +54,7 @@ public class AchievementsController(IAchievmentService service) : ControllerBase
     /// Удалить ачивку (доступно только сотруднику)
     /// </summary>
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Employee")]
     public async Task<IActionResult> Delete(Guid id)
     {
         var deleted = await service.DeleteAsync(id);
