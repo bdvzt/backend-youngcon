@@ -144,8 +144,23 @@ using (var scope = app.Services.CreateScope())
     });
 }
 
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwagger(c =>
+{
+    c.RouteTemplate = "swagger/{documentName}/swagger.json";
+    c.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+    {
+        swaggerDoc.Servers = new List<OpenApiServer>
+        {
+            new OpenApiServer { Url = $"http://{httpReq.Host.Value}" }
+        };
+    });
+});
+
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "YoungCon API V1");
+    c.RoutePrefix = "swagger";
+});
 
 app.UseCors("FrontCors");
 
