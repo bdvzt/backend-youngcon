@@ -21,6 +21,5 @@ public class CreateSpeakerRequest
     
     [Required(ErrorMessage = "URL аватара обязателен")]
     [Url(ErrorMessage = "Некорректный формат URL")]
-    [MaxLength(500, ErrorMessage = "URL не может быть длиннее 500 символов")]
     public required string AvatarURL { get; set; }
 }

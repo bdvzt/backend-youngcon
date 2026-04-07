@@ -17,6 +17,5 @@ public class UpdateSpeakerRequest
     public string? Bio { get; set; }
     
     [Url(ErrorMessage = "Некорректный формат URL")]
-    [MaxLength(500, ErrorMessage = "URL не может быть длиннее 500 символов")]
     public string? AvatarURL { get; set; }
 }

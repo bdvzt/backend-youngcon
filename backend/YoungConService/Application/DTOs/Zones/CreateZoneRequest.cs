@@ -22,7 +22,6 @@ public class CreateZoneRequest
     
     [Required(ErrorMessage = "Иконка обязательна")]
     [MinLength(1, ErrorMessage = "Иконка должна быть не менее 1 символа")]
-    [MaxLength(100, ErrorMessage = "Иконка не может быть длиннее 100 символов")]
     public required string Icon { get; set; }
     
     [Required(ErrorMessage = "Цвет обязателен")]

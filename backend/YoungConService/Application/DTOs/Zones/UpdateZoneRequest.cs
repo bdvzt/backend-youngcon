@@ -15,7 +15,6 @@ public class UpdateZoneRequest
     public string? Description { get; set; }
     
     [MinLength(1, ErrorMessage = "Иконка должна быть не менее 1 символа")]
-    [MaxLength(100, ErrorMessage = "Иконка не может быть длиннее 100 символов")]
     public string? Icon { get; set; }
     
     [RegularExpression("^#[0-9A-Fa-f]{6}$", ErrorMessage = "Цвет должен быть в формате #RRGGBB")]
