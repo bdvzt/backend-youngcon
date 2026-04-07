@@ -251,5 +251,17 @@
         <member name="M:YoungConService.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:YoungConService.Migrations.UpdateAchievmentsAndFloorsIcons">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateAchievmentsAndFloorsIcons.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateAchievmentsAndFloorsIcons.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateAchievmentsAndFloorsIcons.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
