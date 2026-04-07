@@ -233,15 +233,20 @@ namespace YoungConService.Migrations
                 column: "AvatarURL",
                 value: "https://disk.yandex.ru/i/UQpqThhyd6LYiw");
 
-            migrationBuilder.InsertData(
-                table: "UserAchievments",
-                columns: new[] { "AchievmentsId", "UserId" },
-                values: new object[,]
-                {
-                    { new Guid("f6000000-0000-0000-0000-000000000001"), new Guid("44444444-4444-4444-4444-444444444444") },
-                    { new Guid("f6000000-0000-0000-0000-000000000002"), new Guid("44444444-4444-4444-4444-444444444444") },
-                    { new Guid("f6000000-0000-0000-0000-000000000003"), new Guid("44444444-4444-4444-4444-444444444444") }
-                });
+            // Idempotent seed for existing databases: do not fail if rows already exist.
+            migrationBuilder.Sql("""
+                INSERT INTO "UserAchievments" ("AchievmentsId", "UserId")
+                VALUES ('f6000000-0000-0000-0000-000000000001', '44444444-4444-4444-4444-444444444444')
+                ON CONFLICT ("AchievmentsId", "UserId") DO NOTHING;
+
+                INSERT INTO "UserAchievments" ("AchievmentsId", "UserId")
+                VALUES ('f6000000-0000-0000-0000-000000000002', '44444444-4444-4444-4444-444444444444')
+                ON CONFLICT ("AchievmentsId", "UserId") DO NOTHING;
+
+                INSERT INTO "UserAchievments" ("AchievmentsId", "UserId")
+                VALUES ('f6000000-0000-0000-0000-000000000003', '44444444-4444-4444-4444-444444444444')
+                ON CONFLICT ("AchievmentsId", "UserId") DO NOTHING;
+                """);
 
             migrationBuilder.UpdateData(
                 table: "Users",
@@ -352,20 +357,8 @@ namespace YoungConService.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "UserAchievments",
-                keyColumns: new[] { "AchievmentsId", "UserId" },
-                keyValues: new object[] { new Guid("f6000000-0000-0000-0000-000000000001"), new Guid("44444444-4444-4444-4444-444444444444") });
-
-            migrationBuilder.DeleteData(
-                table: "UserAchievments",
-                keyColumns: new[] { "AchievmentsId", "UserId" },
-                keyValues: new object[] { new Guid("f6000000-0000-0000-0000-000000000002"), new Guid("44444444-4444-4444-4444-444444444444") });
-
-            migrationBuilder.DeleteData(
-                table: "UserAchievments",
-                keyColumns: new[] { "AchievmentsId", "UserId" },
-                keyValues: new object[] { new Guid("f6000000-0000-0000-0000-000000000003"), new Guid("44444444-4444-4444-4444-444444444444") });
+            // Skip delete for UserAchievments in Down because Up uses idempotent insert and
+            // these rows may pre-exist before this migration.
 
             migrationBuilder.DropColumn(
                 name: "CoordX",
