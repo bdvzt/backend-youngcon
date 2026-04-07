@@ -30,6 +30,13 @@ public class UserRepository(YoungConDbContext db) : IUserRepository
         return await db.Users.FirstOrDefaultAsync(u => u.QrCode == qrCode);
     }
 
+    public async Task<User?> GetByQrCodeWithAchievmentsAsync(string qrCode)
+    {
+        return await db.Users
+            .Include(u => u.Achievments)
+            .FirstOrDefaultAsync(u => u.QrCode == qrCode);
+    }
+
     public async Task<Achievment?> GetAchievmentByIdAsync(Guid achievmentId)
     {
         return await db.Achievments.FirstOrDefaultAsync(a => a.Id == achievmentId);

@@ -9,6 +9,7 @@ public interface IUserRepository
     Task<User?> GetByIdWithLikedEventsAsync(Guid id);
     Task<User?> GetByIdWithAchievmentsAsync(Guid id);
     Task<User?> GetByQrCodeAsync(string qrCode);
+    Task<User?> GetByQrCodeWithAchievmentsAsync(string qrCode);
     Task<Achievment?> GetAchievmentByIdAsync(Guid achievmentId);
     Task<User?> GetByEmailAsync(string email);
     Task<IReadOnlyCollection<Achievment>> GetAchievmentsByUserIdAsync(Guid userId);

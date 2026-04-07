@@ -11,15 +11,15 @@ public static class SpeakerSeedData
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000001"),
             FullName = "Алексей Агеев",
             Job = "Техлид команды мобильной разработки в Межгороде",
-            Bio = "15 лет развивает веб-платформы и клиентские архитектуры",
+            Bio = "Руководит мобильной разработкой, выстраивает архитектуру iOS-приложений и процессы команды.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.09.31.jpeg"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000002"),
             FullName = "Андрей Сикерин",
-            Job = "Техлид мобильной разработки",
-            Bio = "Создает мобильные приложения для миллионов пользователей",
+            Job = "iOS-разработчик в Yandex Browser",
+            Bio = "Разрабатывает и оптимизирует iOS-фичи браузера, улучшает производительность и пользовательский опыт.",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },
         new()
@@ -27,15 +27,15 @@ public static class SpeakerSeedData
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000003"),
             FullName = "Мария Журавлева",
             Job = "HR manager",
-            Bio = "Проектирует рекомендательные и поисковые модели",
+            Bio = "Отвечает за найм и развитие инженерных команд, сопровождает карьерные треки специалистов.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.09.25.jpeg"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000004"),
             FullName = "Илья Соловьев",
-            Job = "DevOps-архитектор",
-            Bio = "Автоматизирует облачную инфраструктуру и релизы",
+            Job = "iOS-разработчик в Yandex Browser",
+            Bio = "Занимается клиентской разработкой iOS-приложения и внедряет новые продуктовые сценарии.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.08.30.jpeg"
         },
         new()
@@ -43,7 +43,7 @@ public static class SpeakerSeedData
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000005"),
             FullName = "Тимур Долозаткин",
             Job = "iOS инженер Yandex Go",
-            Bio = "Специализируется на распределенных сервисах",
+            Bio = "Разрабатывает ключевые iOS-компоненты Yandex Go и поддерживает стабильность релизов.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.09.12.jpeg"
         },
         new()
@@ -51,15 +51,15 @@ public static class SpeakerSeedData
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000006"),
             FullName = "Дима Деларю",
             Job = "iOS-разработчик Yandex Go",
-            Bio = "Ведет кросс-функциональные продуктовые команды",
+            Bio = "Фокусируется на продуктовых iOS-фичах, улучшает качество кода и пользовательский опыт.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.09.38.jpeg"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000007"),
             FullName = "Антон Таранов",
-            Job = "UX-дизайнер",
-            Bio = "Проектирует интерфейсы на основе пользовательских данных",
+            Job = "iOS-разработчик SuperApp",
+            Bio = "Разрабатывает iOS-модули SuperApp и интеграции между сервисами.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.09.44.jpeg"
         },
         new()
@@ -67,24 +67,24 @@ public static class SpeakerSeedData
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000008"),
             FullName = "Никикта Леванов",
             Job = "iOS-разработчик Yandex Go",
-            Bio = "Занимается безопасностью приложений и API",
+            Bio = "Работает над iOS-архитектурой и инфраструктурой приложения, повышает надежность клиентской части.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/photo_2026-04-07%2017.08.55.jpeg"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000009"),
             FullName = "Анастасия Талмазан",
-            Job = "Yandex Go SuperApp",
-            Bio = "Помогает командам на ранней стадии роста",
+            Job = "iOS-разработчик SuperApp",
+            Bio = "Отвечает за развитие iOS-функциональности SuperApp и быстрый запуск новых сценариев.",
             AvatarURL = "https://storage.yandexcloud.net/youngcon/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%C2%A0%E2%80%94%202026-04-07%20%D0%B2%C2%A017.10.48.png"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-00000000000a"),
-            FullName = "Ольга Андреева",
-            Job = "Лид комьюнити",
-            Bio = "Развивает инженерные и продуктовые сообщества",
-            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
+            FullName = "Степан Потапов",
+            Job = "iOS-разработчик Yandex Plus",
+            Bio = "Развивает iOS-приложение Yandex Plus, работает над подписочными и медиасценариями.",
+            AvatarURL = "https://storage.yandexcloud.net/youngcon/stepan.png"
         }
     };
 }

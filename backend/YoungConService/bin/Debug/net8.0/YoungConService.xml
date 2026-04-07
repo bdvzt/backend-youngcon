@@ -287,5 +287,17 @@
         <member name="M:YoungConService.Migrations.UpdateSpeakerAvatarSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:YoungConService.Migrations.UpdateAllSeedDataApr07">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateAllSeedDataApr07.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateAllSeedDataApr07.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateAllSeedDataApr07.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

@@ -133,16 +133,15 @@ public class UserService(
             throw new BadRequestException("Выдача ачивок по QR доступна только сотруднику");
         }
 
-        var user = await _userRepository.GetByQrCodeAsync(request.QrCode.Trim());
-        if (user == null)
+        if (string.IsNullOrWhiteSpace(request.QrCode))
         {
-            throw new NotFoundException("Пользователь с таким QR кодом не найден");
+            throw new BadRequestException("QR код не может быть пустым");
         }
 
-        var userWithAchievments = await _userRepository.GetByIdWithAchievmentsAsync(user.Id);
+        var userWithAchievments = await _userRepository.GetByQrCodeWithAchievmentsAsync(request.QrCode.Trim());
         if (userWithAchievments == null)
         {
-            throw new NotFoundException("Пользователь не найден");
+            throw new NotFoundException("Пользователь с таким QR кодом не найден");
         }
 
         var achievment = await _userRepository.GetAchievmentByIdAsync(request.AchievmentId);
@@ -151,18 +150,30 @@ public class UserService(
             throw new NotFoundException("Ачивка не найдена");
         }
 
-        var alreadyAssigned = userWithAchievments.Achievments.Any(a => a.Id == achievment.Id);
-        if (!alreadyAssigned)
+        var existingAchievment = userWithAchievments.Achievments.FirstOrDefault(a => a.Id == achievment.Id);
+        var assignedNow = false;
+        var removedNow = false;
+
+        if (existingAchievment == null)
         {
             userWithAchievments.Achievments.Add(achievment);
-            await _userRepository.UpdateAsync(userWithAchievments);
+            assignedNow = true;
         }
+        else
+        {
+            userWithAchievments.Achievments.Remove(existingAchievment);
+            removedNow = true;
+        }
+
+        await _userRepository.UpdateAsync(userWithAchievments);
 
         return new AssignAchievmentByQrResultDto
         {
             UserId = userWithAchievments.Id,
             AchievmentId = achievment.Id,
-            AssignedNow = !alreadyAssigned
+            AssignedNow = assignedNow,
+            RemovedNow = removedNow,
+            HasAchievmentNow = assignedNow
         };
     }
 

@@ -8,28 +8,33 @@ public static class AchievmentSeedData
     {
         new()
         {
-            Id = Guid.Parse("f6000000-0000-0000-0000-000000000001"), Name = "КВЕСТ ПРОЙДЕН",
-            Description = "Первый вход в приложение", Icon = "https://storage.yandexcloud.net/youngcon/free-icon-bird-roadrunner-shape-47127%20(1).png", Color = "#2563EB"
+            Id = Guid.Parse("f6000000-0000-0000-0000-000000000001"), Name = "Ранняя пташка",
+            Description = "Отсканируй бейдж при входе и окажись среди первых 30 участников фестиваля.", Icon = "https://storage.yandexcloud.net/youngcon/first.png", Color = "#FF87BB"
         },
         new()
         {
-            Id = Guid.Parse("f6000000-0000-0000-0000-000000000002"), Name = "КОФЕМАН",
-            Description = "Просмотрено 5 событий", Icon = "https://storage.yandexcloud.net/youngcon/free-icon-bird-roadrunner-shape-47127%20(1).png", Color = "#7C3AED"
+            Id = Guid.Parse("f6000000-0000-0000-0000-000000000002"), Name = "Слушатель",
+            Description = "Отсканируй бейдж на одной из лекций.", Icon = "https://storage.yandexcloud.net/youngcon/headphones.png", Color = "#C59EFF"
         },
         new()
         {
-            Id = Guid.Parse("f6000000-0000-0000-0000-000000000003"), Name = "НЕТВОРКЕР",
-            Description = "Добавлен первый фестиваль в избранное", Icon = "https://storage.yandexcloud.net/youngcon/free-icon-bird-roadrunner-shape-47127%20(1).png", Color = "#DC2626"
+            Id = Guid.Parse("f6000000-0000-0000-0000-000000000003"), Name = "Кофеман",
+            Description = "Отсканируй бейдж в кофе-поинте и получи фирменный напиток от партнёров.", Icon = "https://storage.yandexcloud.net/youngcon/coffee1.png", Color = "#FCFF72"
         },
         new()
         {
-            Id = Guid.Parse("f6000000-0000-0000-0000-000000000004"), Name = "ЦЕЛЫЙ ДЕНЬ",
-            Description = "Проведен весь день на фестивале (11:00–23:00)", Icon = "https://storage.yandexcloud.net/youngcon/free-icon-bird-roadrunner-shape-47127%20(1).png", Color = "#16A34A"
+            Id = Guid.Parse("f6000000-0000-0000-0000-000000000004"), Name = "Нетворкер",
+            Description = "Обменяйся контактами с 3 разными участниками и отсканируй бейдж в комьюнити-зоне.", Icon = "https://storage.yandexcloud.net/youngcon/network.png", Color = "#FF87BB"
         },
         new()
         {
-            Id = Guid.Parse("f6000000-0000-0000-0000-000000000005"), Name = "ОФФЕР В КАРМАНЕ!",
-            Description = "Прослушано 3 доклада", Icon = "https://storage.yandexcloud.net/youngcon/free-icon-bird-roadrunner-shape-47127%20(1).png", Color = "#EA580C"
+            Id = Guid.Parse("f6000000-0000-0000-0000-000000000005"), Name = "Поехали",
+            Description = "Побывайте на прямой трансляции с МКС.", Icon = "https://storage.yandexcloud.net/youngcon/mks.png", Color = "#C59EFF"
+        },
+        new()
+        {
+            Id = Guid.Parse("f6000000-0000-0000-0000-000000000006"), Name = "Оффер в кармане",
+            Description = "Пройти Fast Track и получи приглашение на собеседование.", Icon = "https://storage.yandexcloud.net/youngcon/offer.png", Color = "#FCFF72"
         }
     };
 }
