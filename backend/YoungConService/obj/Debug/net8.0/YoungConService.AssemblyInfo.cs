@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YoungConService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+489dd39eb439a6e1dcd71f05bb2a5c4042dc7c2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c1534bd09aa330d73638ca072b2f679b9ba90dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("YoungConService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YoungConService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

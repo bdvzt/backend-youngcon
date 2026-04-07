@@ -251,5 +251,17 @@
         <member name="M:YoungConService.Migrations.RefreshSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
