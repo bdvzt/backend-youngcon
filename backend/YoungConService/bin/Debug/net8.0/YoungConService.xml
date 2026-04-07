@@ -263,5 +263,17 @@
         <member name="M:YoungConService.Migrations.UpdateAchievmentsAndFloorsIcons.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:YoungConService.Migrations.UpdateZoneAndSpeakerSeedData">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateZoneAndSpeakerSeedData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateZoneAndSpeakerSeedData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:YoungConService.Migrations.UpdateZoneAndSpeakerSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

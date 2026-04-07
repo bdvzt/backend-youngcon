@@ -9,15 +9,15 @@ public static class SpeakerSeedData
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000001"),
-            FullName = "Степан Потапов",
-            Job = "iOS-разработчик команды плюса",
+            FullName = "Алексей Агеев",
+            Job = "Техлид команды мобильной разработки в Межгороде",
             Bio = "15 лет развивает веб-платформы и клиентские архитектуры",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000002"),
-            FullName = "Мария Петрова",
+            FullName = "Андрей Сикерин",
             Job = "Техлид мобильной разработки",
             Bio = "Создает мобильные приложения для миллионов пользователей",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
@@ -25,15 +25,15 @@ public static class SpeakerSeedData
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000003"),
-            FullName = "Иван Волков",
-            Job = "ML-инженер",
+            FullName = "Мария Журавлева",
+            Job = "HR manager",
             Bio = "Проектирует рекомендательные и поисковые модели",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000004"),
-            FullName = "Елена Сокол",
+            FullName = "Илья Соловьев",
             Job = "DevOps-архитектор",
             Bio = "Автоматизирует облачную инфраструктуру и релизы",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
@@ -41,23 +41,23 @@ public static class SpeakerSeedData
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000005"),
-            FullName = "Никита Орлов",
-            Job = "Бэкенд-инженер",
+            FullName = "Тимур Долозаткин",
+            Job = "iOS инженер Yandex Go",
             Bio = "Специализируется на распределенных сервисах",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000006"),
-            FullName = "Анна Белова",
-            Job = "Продакт-менеджер",
+            FullName = "Дима Деларю",
+            Job = "iOS-разработчик Yandex Go",
             Bio = "Ведет кросс-функциональные продуктовые команды",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000007"),
-            FullName = "Дмитрий Егоров",
+            FullName = "Антон Таранов",
             Job = "UX-дизайнер",
             Bio = "Проектирует интерфейсы на основе пользовательских данных",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
@@ -65,16 +65,16 @@ public static class SpeakerSeedData
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000008"),
-            FullName = "София Медведева",
-            Job = "Инженер по безопасности",
+            FullName = "Никикта Леванов",
+            Job = "iOS-разработчик Yandex Go",
             Bio = "Занимается безопасностью приложений и API",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },
         new()
         {
             Id = Guid.Parse("f4000000-0000-0000-0000-000000000009"),
-            FullName = "Павел Зорин",
-            Job = "Ментор стартапов",
+            FullName = "Анастасия Талмазан",
+            Job = "Yandex Go SuperApp",
             Bio = "Помогает командам на ранней стадии роста",
             AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw"
         },

@@ -13,6 +13,8 @@ public class UpdateZoneRequest
     [MinLength(5, ErrorMessage = "Описание должно быть не менее 5 символов")]
     [MaxLength(500, ErrorMessage = "Описание не может быть длиннее 500 символов")]
     public string? Description { get; set; }
+    public required double CoordX { get; set; }
+    public required double CoordY { get; set; }
     
     [MinLength(1, ErrorMessage = "Иконка должна быть не менее 1 символа")]
     public string? Icon { get; set; }

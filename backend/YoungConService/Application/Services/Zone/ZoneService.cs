@@ -47,7 +47,8 @@ public class ZoneService(IZoneRepository repository) : IZoneService
         if (request.Description != null) existing.Description = request.Description;
         if (request.Icon != null) existing.Icon = request.Icon;
         if (request.Color != null) existing.Color = request.Color;
-
+        if (request.CoordX is double coordX) existing.CoordX = coordX;
+        if (request.CoordY is double coordY) existing.CoordY = coordY;
         var updated = await repository.UpdateAsync(existing);
         return updated?.ToDto();
     }

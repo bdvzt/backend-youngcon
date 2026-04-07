@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using YoungConService.Infrastructure.Repositories;
@@ -11,9 +12,11 @@ using YoungConService.Infrastructure.Repositories;
 namespace YoungConService.Migrations
 {
     [DbContext(typeof(YoungConDbContext))]
-    partial class YoungConDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260407140229_UpdateZoneAndSpeakerSeedData")]
+    partial class UpdateZoneAndSpeakerSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

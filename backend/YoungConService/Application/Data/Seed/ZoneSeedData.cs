@@ -14,8 +14,8 @@ public static class ZoneSeedData
             Description = "Ключевые доклады и открытие",
             Icon = "https://disk.yandex.ru/i/iKkOIrUSoGj94g",
             Color = "#2563EB",
-            CoordX = 0.1, 
-            CoordY = 0.2  
+            CoordX = 0.66,
+            CoordY = 0.48
         },
         new()
         {
@@ -25,8 +25,8 @@ public static class ZoneSeedData
             Description = "Практические сессии и разборы",
             Icon = "https://disk.yandex.ru/i/dpqf86-EPl3LZQ",
             Color = "#7C3AED",
-            CoordX = 0.3, 
-            CoordY = 0.15
+            CoordX = 0.22,
+            CoordY = 0.11
         },
         new()
         {
@@ -36,8 +36,8 @@ public static class ZoneSeedData
             Description = "Консультации и карьерные треки",
             Icon = "https://disk.yandex.ru/i/Brxe_BOEQLs4Uw",
             Color = "#059669",
-            CoordX = 0.45,  
-            CoordY = 0.25 
+            CoordX = 0.25,
+            CoordY = 0.36
         },
         new()
         {
@@ -47,8 +47,8 @@ public static class ZoneSeedData
             Description = "Демо и стенды по ML",
             Icon = "https://disk.yandex.ru/i/Brxe_BOEQLs4Uw",
             Color = "#DC2626",
-            CoordX = 0.2,  
-            CoordY = 0.35   
+            CoordX = 0.52,
+            CoordY = 0.08
         },
         new()
         {
@@ -58,8 +58,8 @@ public static class ZoneSeedData
             Description = "iOS и Android практики",
             Icon = "https://disk.yandex.ru/i/wJm1eOGLzPXgKA",
             Color = "#EA580C",
-            CoordX = 0.5, 
-            CoordY = 0.1
+            CoordX = 0.78,
+            CoordY = 0.11
         },
         new()
         {
@@ -69,8 +69,8 @@ public static class ZoneSeedData
             Description = "Серверные технологии и архитектура",
             Icon = "https://disk.yandex.ru/i/Mq_B4ltBwXqERA",
             Color = "#0F766E",
-            CoordX = 0.15, 
-            CoordY = 0.5   
+            CoordX = 0.18,
+            CoordY = 0.82
         },
         new()
         {
@@ -80,8 +80,8 @@ public static class ZoneSeedData
             Description = "UX, интерфейсы и прототипы",
             Icon = "https://disk.yandex.ru/i/NoBvNU5C1kyYHA",
             Color = "#BE185D",
-            CoordX = 0.4,
-            CoordY = 0.4  
+            CoordX = 0.72,
+            CoordY = 0.82
         },
         new()
         {
@@ -91,8 +91,8 @@ public static class ZoneSeedData
             Description = "Безопасная разработка и лучшие практики",
             Icon = "https://disk.yandex.ru/i/SRL4it0fUb1Vyg",
             Color = "#334155",
-            CoordX = 0.35,  
-            CoordY = 0.55  
+            CoordX = 0.72,
+            CoordY = 0.86
         },
         new()
         {
@@ -102,8 +102,8 @@ public static class ZoneSeedData
             Description = "Питчи, гипотезы и рост",
             Icon = "https://disk.yandex.ru/i/vuHGvBAe5txuRAl",
             Color = "#4F46E5",
-            CoordX = 0.55, 
-            CoordY = 0.3 
+            CoordX = 0.75,
+            CoordY = 0.44
         },
         new()
         {
@@ -113,8 +113,8 @@ public static class ZoneSeedData
             Description = "Нетворкинг и вопросы экспертам",
             Icon = "https://disk.yandex.ru/i/6MvK-ECffChbPg",
             Color = "#16A34A",
-            CoordX = 0.25,  
-            CoordY = 0.45   
+            CoordX = 0.18,
+            CoordY = 0.23
         }
     };
 }
