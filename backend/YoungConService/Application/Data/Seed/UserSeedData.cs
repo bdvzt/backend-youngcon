@@ -16,7 +16,7 @@ public static class UserSeedData
             LastName = "Агеев",
             Email = "ageev@gmail.com",
             QrCode = "QR-11111111",
-            Major = Major.Mobile,
+            Major = Major.IOS,
             HashPassword = "$2a$11$gCAufVWeez3MDd8oFZQ7tONAwMSZAbvLeMXyNOYHOB1Ss5/n/eZXy",
             Role = UserRole.Employee,
             Created = SeedCreatedAt
@@ -28,7 +28,7 @@ public static class UserSeedData
             LastName = "Будаева",
             Email = "budaeva@gmail.com",
             QrCode = "QR-33333333",
-            Major = Major.ML,
+            Major = Major.Backend,
             HashPassword = "$2a$11$UQXeDxqmj0EWcvsKyox8Y..KyqJv2k4aLVuc5NGmoqjvijPDqn9oy",
             Role = UserRole.Client,
             Created = SeedCreatedAt
@@ -52,7 +52,7 @@ public static class UserSeedData
             LastName = "Ильяшова",
             Email = "ilyashova@gmail.com",
             QrCode = "QR-55555555",
-            Major = Major.Frontend,
+            Major = Major.Flutter,
             HashPassword = "$2a$11$vNqPxkGEGmhG1z.8ZR0vgu.AgFqKP84V12XHleGmbCdK4ACXOMQJu",
             Role = UserRole.Client,
             Created = SeedCreatedAt
@@ -64,7 +64,7 @@ public static class UserSeedData
             LastName = "Шакиров",
             Email = "shakirov@gmail.com",
             QrCode = "QR-66666666",
-            Major = Major.Frontend,
+            Major = Major.ML,
             HashPassword = "$2a$11$YXLD4kx1Ig91fzeqPDCHheUfYfF//2BSZcGcorZ0dvZtOJYbAX5xa",
             Role = UserRole.Client,
             Created = SeedCreatedAt
@@ -76,7 +76,7 @@ public static class UserSeedData
             LastName = "Мещеряков",
             Email = "mescheryakov@gmail.com",
             QrCode = "QR-77777777",
-            Major = Major.Mobile,
+            Major = Major.Android,
             HashPassword = "$2a$11$gXyWzFVta14QE2rumahQKeEtwwERMEAuWhSOgbl9c0Lg44kcI3amq",
             Role = UserRole.Client,
             Created = SeedCreatedAt

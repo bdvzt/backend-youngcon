@@ -1,6 +1,6 @@
 using YoungConService.DTOs.Zones;
 
-namespace YoungConService.Services.Events.Zone;
+namespace YoungConService.Application.Services.Zone;
 
 public interface IZoneService
 {
@@ -11,4 +11,3 @@ public interface IZoneService
     Task<ZoneDTO?> UpdateAsync(Guid id, UpdateZoneRequest request);
     Task<bool> DeleteAsync(Guid id);
 }
-

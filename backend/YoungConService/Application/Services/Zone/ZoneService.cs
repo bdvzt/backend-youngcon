@@ -1,8 +1,9 @@
+using YoungConService.Application.Services.Zone;
 using YoungConService.DTOs.Zones;
 using YoungConService.Infrastructure.Mappers;
 using YoungConService.Repositories.Events;
 
-namespace YoungConService.Services.Events.Zone;
+namespace YoungConService.Application.Services.Zone;
 
 public class ZoneService(IZoneRepository repository) : IZoneService
 {
@@ -26,6 +27,8 @@ public class ZoneService(IZoneRepository repository) : IZoneService
             FloorId = request.FloorId,
             Title = request.Title,
             Description = request.Description,
+            CoordX = double.Parse(request.CoordX),
+            CoordY = double.Parse(request.CoordY), 
             Icon = request.Icon,
             Color = request.Color
         };

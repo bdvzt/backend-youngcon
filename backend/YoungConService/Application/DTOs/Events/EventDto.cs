@@ -9,4 +9,5 @@ public class EventDTO
     public required string Category { get; set; }
     public required Guid ZoneId { get; set; }
     public required Guid FestivalId { get; set; }
+    public string? StreamURL { get; set; }
 }

@@ -6,6 +6,8 @@ public class ZoneDTO
     public required Guid FloorId { get; set; }
     public required string Title { get; set; } 
     public required string Description { get; set; } 
+    public required double CoordX { get; set; }
+    public required double CoordY { get; set; }
     public required string Icon { get; set; }
     public required string Color { get; set; }
 }

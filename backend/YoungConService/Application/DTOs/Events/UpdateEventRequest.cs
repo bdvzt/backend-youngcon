@@ -21,5 +21,9 @@ public class UpdateEventRequest
     
     public Guid? ZoneId { get; set; }
     public Guid? FestivalId { get; set; }
+    
+    [Url(ErrorMessage = "StreamURL должен быть корректным URL")]
+    public string? StreamURL { get; set; }
+    
     public Guid[]? SpeakerIds { get; set; }
 }

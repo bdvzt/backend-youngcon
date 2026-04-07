@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using YoungConService.Application.Services.Zone;
 using YoungConService.DTOs.Zones;
-using YoungConService.Services.Events.Zone;
 
 namespace YoungConService.Controllers;
 
@@ -68,5 +68,6 @@ public class ZonesController(IZoneService service) : ControllerBase
         var deleted = await service.DeleteAsync(id);
         return deleted ? NoContent() : NotFound();
     }
-}
 
+    // Добавлено поле StreamURL
+}

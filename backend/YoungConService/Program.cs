@@ -16,7 +16,7 @@ using YoungConService.Services.Events.Event;
 using YoungConService.Services.Events.Festival;
 using YoungConService.Services.Events.Floor;
 using YoungConService.Services.Events.Speaker;
-using YoungConService.Services.Events.Zone;
+using YoungConService.Application.Services.Zone;
 using YoungConService.Infrastructure.Errors.Exceptions;
 using YoungConService.Services.Validators;
 using Swashbuckle.AspNetCore.Annotations;

@@ -16,7 +16,8 @@ public static class EventMapper
             EndDateTime = eventik.EndDateTime,
             Category = eventik.Category,
             ZoneId = eventik.ZoneId,
-            FestivalId = eventik.FestivalId
+            FestivalId = eventik.FestivalId,
+            StreamURL = eventik.StreamURL
         };
     }
 

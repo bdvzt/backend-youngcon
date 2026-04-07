@@ -31,5 +31,8 @@ public class CreateEventRequest
     [Required(ErrorMessage = "FestivalId обязателен")]
     public required Guid FestivalId { get; set; }
     
+    [Url(ErrorMessage = "StreamURL должен быть корректным URL")]
+    public string? StreamURL { get; set; }
+    
     public Guid[] SpeakerIds { get; set; } = [];
 }

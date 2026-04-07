@@ -9,62 +9,112 @@ public static class ZoneSeedData
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000001"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"), Title = "Главная сцена",
-            Description = "Ключевые доклады и открытие", Icon = "sparkles.rectangle.stack.fill", Color = "#2563EB"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"),
+            Title = "Главная сцена",
+            Description = "Ключевые доклады и открытие",
+            Icon = "https://disk.yandex.ru/i/iKkOIrUSoGj94g",
+            Color = "#2563EB",
+            CoordX = 0.1, 
+            CoordY = 0.2  
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000002"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"), Title = "Зал воркшопов",
-            Description = "Практические сессии и разборы", Icon = "hammer.fill", Color = "#7C3AED"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"),
+            Title = "Зал воркшопов",
+            Description = "Практические сессии и разборы",
+            Icon = "https://disk.yandex.ru/i/dpqf86-EPl3LZQ",
+            Color = "#7C3AED",
+            CoordX = 0.3, 
+            CoordY = 0.15
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000003"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"), Title = "Карьерная зона",
-            Description = "Консультации и карьерные треки", Icon = "briefcase.fill", Color = "#059669"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"),
+            Title = "Карьерная зона",
+            Description = "Консультации и карьерные треки",
+            Icon = "https://disk.yandex.ru/i/Brxe_BOEQLs4Uw",
+            Color = "#059669",
+            CoordX = 0.45,  
+            CoordY = 0.25 
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000004"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"), Title = "Лаборатория ИИ",
-            Description = "Демо и стенды по ML", Icon = "brain.head.profile", Color = "#DC2626"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"),
+            Title = "Лаборатория ИИ",
+            Description = "Демо и стенды по ML",
+            Icon = "https://disk.yandex.ru/i/Brxe_BOEQLs4Uw",
+            Color = "#DC2626",
+            CoordX = 0.2,  
+            CoordY = 0.35   
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000005"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"), Title = "Мобильная точка",
-            Description = "iOS и Android практики", Icon = "iphone.gen3", Color = "#EA580C"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"),
+            Title = "Мобильная точка",
+            Description = "iOS и Android практики",
+            Icon = "https://disk.yandex.ru/i/wJm1eOGLzPXgKA",
+            Color = "#EA580C",
+            CoordX = 0.5, 
+            CoordY = 0.1
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000006"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"), Title = "Бэкенд-комната",
-            Description = "Серверные технологии и архитектура", Icon = "server.rack", Color = "#0F766E"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"),
+            Title = "Бэкенд-комната",
+            Description = "Серверные технологии и архитектура",
+            Icon = "https://disk.yandex.ru/i/Mq_B4ltBwXqERA",
+            Color = "#0F766E",
+            CoordX = 0.15, 
+            CoordY = 0.5   
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000007"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"), Title = "Дизайн-уголок",
-            Description = "UX, интерфейсы и прототипы", Icon = "paintpalette.fill", Color = "#BE185D"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"),
+            Title = "Дизайн-уголок",
+            Description = "UX, интерфейсы и прототипы",
+            Icon = "https://disk.yandex.ru/i/NoBvNU5C1kyYHA",
+            Color = "#BE185D",
+            CoordX = 0.4,
+            CoordY = 0.4  
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000008"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"), Title = "Хаб безопасности",
-            Description = "Безопасная разработка и лучшие практики", Icon = "shield.lefthalf.filled", Color = "#334155"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"),
+            Title = "Хаб безопасности",
+            Description = "Безопасная разработка и лучшие практики",
+            Icon = "https://disk.yandex.ru/i/SRL4it0fUb1Vyg",
+            Color = "#334155",
+            CoordX = 0.35,  
+            CoordY = 0.55  
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-000000000009"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"), Title = "Стартап-площадка",
-            Description = "Питчи, гипотезы и рост", Icon = "paperplane.fill", Color = "#4F46E5"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000002"),
+            Title = "Стартап-площадка",
+            Description = "Питчи, гипотезы и рост",
+            Icon = "https://disk.yandex.ru/i/vuHGvBAe5txuRAl",
+            Color = "#4F46E5",
+            CoordX = 0.55, 
+            CoordY = 0.3 
         },
         new()
         {
             Id = Guid.Parse("f3000000-0000-0000-0000-00000000000a"),
-            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"), Title = "Комьюнити-зона",
-            Description = "Нетворкинг и вопросы экспертам", Icon = "person.3.fill", Color = "#16A34A"
+            FloorId = Guid.Parse("f2000000-0000-0000-0000-000000000001"),
+            Title = "Комьюнити-зона",
+            Description = "Нетворкинг и вопросы экспертам",
+            Icon = "https://disk.yandex.ru/i/6MvK-ECffChbPg",
+            Color = "#16A34A",
+            CoordX = 0.25,  
+            CoordY = 0.45   
         }
     };
 }

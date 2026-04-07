@@ -14,6 +14,7 @@ public class Event
     public required DateTime EndDateTime { get; set; }
     
     public required string Category { get; set; }
+    public string? StreamURL { get; set; }
     public Zone Zone { get; set; } = null!;
     public Festival Festival { get; set; } = null!;
     public ICollection<Speaker> Speakers { get; set; } = [];

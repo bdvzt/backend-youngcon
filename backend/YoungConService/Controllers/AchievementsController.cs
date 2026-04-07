@@ -60,5 +60,6 @@ public class AchievementsController(IAchievmentService service) : ControllerBase
         var deleted = await service.DeleteAsync(id);
         return deleted ? NoContent() : NotFound();
     }
-}
 
+    // Добавлено поле StreamURL
+}

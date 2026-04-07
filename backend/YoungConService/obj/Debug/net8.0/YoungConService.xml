@@ -11,7 +11,7 @@
         </member>
         <member name="M:YoungConService.Controllers.AchievementsController.GetById(System.Guid)">
             <summary>
-            Получить ачивку по идентификатору
+            Получить ачивку по идентификатору ,,
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.AchievementsController.Create(YoungConService.DTOs.Achievments.CreateAchievmentRequest)">
@@ -226,17 +226,17 @@
         </member>
         <member name="M:YoungConService.Controllers.ZonesController.Create(YoungConService.DTOs.Zones.CreateZoneRequest)">
             <summary>
-            Создать зону (доступно только сотруднику)
+            Создать зону
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.ZonesController.Update(System.Guid,YoungConService.DTOs.Zones.UpdateZoneRequest)">
             <summary>
-            Обновить зону (доступно только сотруднику)
+            Обновить зону
             </summary>
         </member>
         <member name="M:YoungConService.Controllers.ZonesController.Delete(System.Guid)">
             <summary>
-            Удалить зону (доступно только сотруднику)
+            Удалить зону
             </summary>
         </member>
         <member name="T:YoungConService.Migrations.RefreshSeedData">

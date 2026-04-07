@@ -17,6 +17,9 @@ public class CreateZoneRequest
     [MaxLength(500, ErrorMessage = "Описание не может быть длиннее 500 символов")]
     public required string Description { get; set; }
     
+    public required string CoordX { get; set; }
+    public required string CoordY { get; set; }
+    
     [Required(ErrorMessage = "Иконка обязательна")]
     [MinLength(1, ErrorMessage = "Иконка должна быть не менее 1 символа")]
     [MaxLength(100, ErrorMessage = "Иконка не может быть длиннее 100 символов")]

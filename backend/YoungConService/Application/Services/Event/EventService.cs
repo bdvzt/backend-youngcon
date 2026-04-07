@@ -101,6 +101,7 @@ public class EventService(
             Category = request.Category,
             ZoneId = request.ZoneId,
             FestivalId = request.FestivalId,
+            StreamURL = request.StreamURL,
             Speakers = speakers.ToArray()
         };
 
@@ -120,6 +121,7 @@ public class EventService(
         if (request.Category != null) existing.Category = request.Category;
         if (request.ZoneId.HasValue) existing.ZoneId = request.ZoneId.Value;
         if (request.FestivalId.HasValue) existing.FestivalId = request.FestivalId.Value;
+        if (request.StreamURL != null) existing.StreamURL = request.StreamURL;
 
         if (request.SpeakerIds != null)
         {

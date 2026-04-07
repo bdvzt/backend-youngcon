@@ -117,4 +117,6 @@ public class UsersController(IUserService service) : ControllerBase
         var result = await service.GetAllAsync(request);
         return Ok(result);
     }
+
+    // Добавлено поле StreamURL
 }

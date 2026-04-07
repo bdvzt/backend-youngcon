@@ -3,7 +3,10 @@ namespace YoungConService.Domain.Enums;
 public enum Major
 {
     Frontend,
-    Mobile,
+    IOS,
+    Flutter,
+    Android,
+    Backend,
     ML,
     DevOps
 }

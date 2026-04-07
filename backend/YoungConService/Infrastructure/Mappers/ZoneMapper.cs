@@ -14,6 +14,8 @@ public static class ZoneMapper
             FloorId = zone.FloorId,
             Title = zone.Title,
             Description = zone.Description,
+            CoordX = zone.CoordX,
+            CoordY = zone.CoordY,
             Icon = zone.Icon,
             Color = zone.Color,
         };
