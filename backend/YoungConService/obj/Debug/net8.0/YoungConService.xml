@@ -239,28 +239,16 @@
             Удалить зону
             </summary>
         </member>
-        <member name="T:YoungConService.Migrations.RefreshSeedData">
+        <member name="T:YoungConService.Migrations.InitialCreate">
             <inheritdoc />
         </member>
-        <member name="M:YoungConService.Migrations.RefreshSeedData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:YoungConService.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:YoungConService.Migrations.RefreshSeedData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:YoungConService.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:YoungConService.Migrations.RefreshSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords">
-            <inheritdoc />
-        </member>
-        <member name="M:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:YoungConService.Migrations.AddEventStreamUrlAndZoneCoords.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:YoungConService.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

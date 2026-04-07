@@ -12,8 +12,8 @@ using YoungConService.Infrastructure.Repositories;
 namespace YoungConService.Migrations
 {
     [DbContext(typeof(YoungConDbContext))]
-    [Migration("20260402084445_RefreshSeedData")]
-    partial class RefreshSeedData
+    [Migration("20260407085137_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,21 +24,6 @@ namespace YoungConService.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("AchievmentUser", b =>
-                {
-                    b.Property<Guid>("AchievmentsId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("AchievmentsId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserAchievments", (string)null);
-                });
 
             modelBuilder.Entity("EventSpeakers", b =>
                 {
@@ -122,6 +107,38 @@ namespace YoungConService.Migrations
                     b.ToTable("UserLikedEvents", (string)null);
                 });
 
+            modelBuilder.Entity("UserAchievments", b =>
+                {
+                    b.Property<Guid>("AchievmentsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("AchievmentsId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserAchievments", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            AchievmentsId = new Guid("f6000000-0000-0000-0000-000000000001"),
+                            UserId = new Guid("44444444-4444-4444-4444-444444444444")
+                        },
+                        new
+                        {
+                            AchievmentsId = new Guid("f6000000-0000-0000-0000-000000000002"),
+                            UserId = new Guid("44444444-4444-4444-4444-444444444444")
+                        },
+                        new
+                        {
+                            AchievmentsId = new Guid("f6000000-0000-0000-0000-000000000003"),
+                            UserId = new Guid("44444444-4444-4444-4444-444444444444")
+                        });
+                });
+
             modelBuilder.Entity("YoungConService.Domain.Entities.Achievment", b =>
                 {
                     b.Property<Guid>("Id")
@@ -154,80 +171,40 @@ namespace YoungConService.Migrations
                             Id = new Guid("f6000000-0000-0000-0000-000000000001"),
                             Color = "#2563EB",
                             Description = "Первый вход в приложение",
-                            Icon = "star.fill",
-                            Name = "Первый вход"
+                            Icon = "https://disk.yandex.ru/i/wm2ZLP7FfpWW7g",
+                            Name = "КВЕСТ ПРОЙДЕН"
                         },
                         new
                         {
                             Id = new Guid("f6000000-0000-0000-0000-000000000002"),
                             Color = "#7C3AED",
                             Description = "Просмотрено 5 событий",
-                            Icon = "safari.fill",
-                            Name = "Исследователь"
+                            Icon = "https://disk.yandex.ru/i/wm2ZLP7FfpWW7g",
+                            Name = "КОФЕМАН"
                         },
                         new
                         {
                             Id = new Guid("f6000000-0000-0000-0000-000000000003"),
                             Color = "#DC2626",
                             Description = "Добавлен первый фестиваль в избранное",
-                            Icon = "heart.fill",
-                            Name = "Фестивальный фанат"
+                            Icon = "https://disk.yandex.ru/i/wm2ZLP7FfpWW7g",
+                            Name = "НЕТВОРКЕР"
                         },
                         new
                         {
                             Id = new Guid("f6000000-0000-0000-0000-000000000004"),
                             Color = "#16A34A",
-                            Description = "Посещено 3 зоны общения",
-                            Icon = "person.3.fill",
-                            Name = "Нетворкер"
+                            Description = "Проведен весь день на фестивале (11:00–23:00)",
+                            Icon = "https://disk.yandex.ru/i/wm2ZLP7FfpWW7g",
+                            Name = "ЦЕЛЫЙ ДЕНЬ"
                         },
                         new
                         {
                             Id = new Guid("f6000000-0000-0000-0000-000000000005"),
                             Color = "#EA580C",
                             Description = "Прослушано 3 доклада",
-                            Icon = "mic.fill",
-                            Name = "Внимательный слушатель"
-                        },
-                        new
-                        {
-                            Id = new Guid("f6000000-0000-0000-0000-000000000006"),
-                            Color = "#0F766E",
-                            Description = "Участие в 2 воркшопах",
-                            Icon = "wrench.and.screwdriver.fill",
-                            Name = "Герой воркшопов"
-                        },
-                        new
-                        {
-                            Id = new Guid("f6000000-0000-0000-0000-000000000007"),
-                            Color = "#334155",
-                            Description = "Пройден трек по безопасности",
-                            Icon = "lock.shield.fill",
-                            Name = "Безопасный подход"
-                        },
-                        new
-                        {
-                            Id = new Guid("f6000000-0000-0000-0000-000000000008"),
-                            Color = "#BE185D",
-                            Description = "Посещение продуктовой сессии",
-                            Icon = "lightbulb.fill",
-                            Name = "Продуктовое мышление"
-                        },
-                        new
-                        {
-                            Id = new Guid("f6000000-0000-0000-0000-000000000009"),
-                            Color = "#4F46E5",
-                            Description = "Посещение дизайн-зоны",
-                            Icon = "paintpalette.fill",
-                            Name = "Чувство дизайна"
-                        },
-                        new
-                        {
-                            Id = new Guid("f6000000-0000-0000-0000-00000000000a"),
-                            Color = "#059669",
-                            Description = "Полный день на фестивале",
-                            Icon = "calendar.badge.clock",
-                            Name = "Целый день"
+                            Icon = "https://disk.yandex.ru/i/wm2ZLP7FfpWW7g",
+                            Name = "ОФФЕР В КАРМАНЕ!"
                         });
                 });
 
@@ -275,6 +252,9 @@ namespace YoungConService.Migrations
                     b.Property<DateTime>("StartDateTime")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("StreamURL")
+                        .HasColumnType("text");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
@@ -295,110 +275,120 @@ namespace YoungConService.Migrations
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000001"),
                             Category = "Пленарный доклад",
-                            Description = "Торжественное открытие фестиваля",
-                            EndDateTime = new DateTime(2026, 6, 25, 9, 30, 0, 0, DateTimeKind.Utc),
+                            Description = "Торжественное открытие конференции. Обзор платформы, основные возможности и план развития",
+                            EndDateTime = new DateTime(2026, 6, 25, 9, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 6, 25, 8, 30, 0, 0, DateTimeKind.Utc),
-                            Title = "Открывающий доклад",
+                            StartDateTime = new DateTime(2026, 6, 25, 8, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=TdnLjukE6Ws&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=1",
+                            Title = "Вводная по платформе",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000002"),
                             Category = "Доклад",
-                            Description = "Тренды и инструменты мобильной экосистемы",
-                            EndDateTime = new DateTime(2026, 7, 2, 11, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Первая часть углубленного курса по Swift. Изучаем продвинутые концепции и лучшие практики программирования на Swift",
+                            EndDateTime = new DateTime(2026, 6, 25, 10, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 7, 2, 10, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "Состояние мобильной разработки",
+                            StartDateTime = new DateTime(2026, 6, 25, 9, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=C2k_GzjdDQk&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=2",
+                            Title = "Advanced Swift programming Part 1",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000003"),
                             Category = "Кейс",
-                            Description = "Практика внедрения моделей в продукты",
-                            EndDateTime = new DateTime(2026, 7, 9, 12, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Вторая часть углубленного курса по Swift. Продолжение изучения сложных паттернов и оптимизации кода",
+                            EndDateTime = new DateTime(2026, 6, 25, 11, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 7, 9, 11, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "ML в продакшене",
+                            StartDateTime = new DateTime(2026, 6, 25, 10, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=XDZal1OUbrU&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=3",
+                            Title = "Advanced Swift programming Part 2",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000003")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000004"),
                             Category = "Воркшоп",
-                            Description = "Подходы к стабильным релизам",
-                            EndDateTime = new DateTime(2026, 7, 16, 13, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Введение в SwiftUI. Основы построения пользовательских интерфейсов с использованием декларативного подхода",
+                            EndDateTime = new DateTime(2026, 6, 25, 12, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 7, 16, 12, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "Шаблоны CI/CD",
+                            StartDateTime = new DateTime(2026, 6, 25, 11, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=NZ46DBOaUzc&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=4",
+                            Title = "Basic SwiftUI",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000004")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000005"),
                             Category = "Доклад",
-                            Description = "Проектирование отказоустойчивых интерфейсов",
-                            EndDateTime = new DateTime(2026, 7, 23, 14, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Продвинутые техники в SwiftUI. Работа со сложными состояниями, анимациями и оптимизацией производительности",
+                            EndDateTime = new DateTime(2026, 6, 25, 13, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 7, 23, 13, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "Надежные API",
+                            StartDateTime = new DateTime(2026, 6, 25, 12, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=FPJNTfR6_J8&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=5",
+                            Title = "Advanced SwiftUI",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000005")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000006"),
                             Category = "Кейс",
-                            Description = "Как находить и проверять гипотезы",
-                            EndDateTime = new DateTime(2026, 7, 30, 15, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Классический подход к разработке интерфейсов на iOS. Основные компоненты и практические примеры использования UIKit",
+                            EndDateTime = new DateTime(2026, 6, 25, 14, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 7, 30, 14, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "Поиск продуктовой ценности",
+                            StartDateTime = new DateTime(2026, 6, 25, 13, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=1PdibPZQu7w&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=6",
+                            Title = "UIKit",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000006")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000007"),
                             Category = "Доклад",
-                            Description = "Системный подход к интерфейсам",
-                            EndDateTime = new DateTime(2026, 8, 6, 12, 30, 0, 0, DateTimeKind.Utc),
+                            Description = "Паттерны архитектуры приложений iOS. MVVM, VIPER, Clean Architecture и их применение в реальных проектах",
+                            EndDateTime = new DateTime(2026, 6, 25, 15, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 8, 6, 11, 30, 0, 0, DateTimeKind.Utc),
-                            Title = "Дизайн-системы",
+                            StartDateTime = new DateTime(2026, 6, 25, 14, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=qhG36NquE8M&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=7",
+                            Title = "Архитектура",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000007")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000008"),
                             Category = "Воркшоп",
-                            Description = "Безопасная разработка на каждом этапе",
-                            EndDateTime = new DateTime(2026, 8, 13, 13, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Инструменты разработки для iOS. Xcode, системы управления зависимостями и оптимизация workflow разработчика",
+                            EndDateTime = new DateTime(2026, 6, 25, 16, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 8, 13, 12, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "Безопасность по умолчанию",
+                            StartDateTime = new DateTime(2026, 6, 25, 15, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=kJtf5InGOME&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=8",
+                            Title = "IDE, Toolchain, Cocoapods/SPM",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000008")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-000000000009"),
                             Category = "Панель",
-                            Description = "Типичные ошибки ранних стадий",
-                            EndDateTime = new DateTime(2026, 8, 20, 14, 30, 0, 0, DateTimeKind.Utc),
+                            Description = "Основы многопоточности в Swift. Главная очередь, фоновые потоки и синхронизация данных",
+                            EndDateTime = new DateTime(2026, 6, 25, 17, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 8, 20, 13, 30, 0, 0, DateTimeKind.Utc),
-                            Title = "Ошибки стартапов",
+                            StartDateTime = new DateTime(2026, 6, 25, 16, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=2sktj5cL4wg&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=9",
+                            Title = "Basic Concurrency",
                             ZoneId = new Guid("f3000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("f5000000-0000-0000-0000-00000000000a"),
                             Category = "Вопросы и ответы",
-                            Description = "Вопросы и ответы с экспертами",
-                            EndDateTime = new DateTime(2026, 8, 27, 17, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Продвинутые концепции многопоточности в Swift. Async/await, actors и обработка ошибок при асинхронной работе",
+                            EndDateTime = new DateTime(2026, 6, 25, 20, 0, 0, 0, DateTimeKind.Utc),
                             FestivalId = new Guid("f1000000-0000-0000-0000-000000000001"),
-                            StartDateTime = new DateTime(2026, 8, 27, 16, 0, 0, 0, DateTimeKind.Utc),
-                            Title = "Открытый микрофон",
+                            StartDateTime = new DateTime(2026, 6, 25, 17, 0, 0, 0, DateTimeKind.Utc),
+                            StreamURL = "https://www.youtube.com/watch?v=MKgtXIStCfk&list=PLXtiZNKIobF6Nj5wq6viExCgXELPZ55dA&index=10",
+                            Title = "Advanced Concurrency",
                             ZoneId = new Guid("f3000000-0000-0000-0000-00000000000a")
                         });
                 });
@@ -501,15 +491,15 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000001"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-1.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "15 лет развивает веб-платформы и клиентские архитектуры",
-                            FullName = "Алексей Смирнов",
-                            Job = "Старший фронтенд-инженер"
+                            FullName = "Степан Потапов",
+                            Job = "iOS-разработчик команды плюса"
                         },
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000002"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-2.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Создает мобильные приложения для миллионов пользователей",
                             FullName = "Мария Петрова",
                             Job = "Техлид мобильной разработки"
@@ -517,7 +507,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000003"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-3.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Проектирует рекомендательные и поисковые модели",
                             FullName = "Иван Волков",
                             Job = "ML-инженер"
@@ -525,7 +515,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000004"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-4.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Автоматизирует облачную инфраструктуру и релизы",
                             FullName = "Елена Сокол",
                             Job = "DevOps-архитектор"
@@ -533,7 +523,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000005"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-5.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Специализируется на распределенных сервисах",
                             FullName = "Никита Орлов",
                             Job = "Бэкенд-инженер"
@@ -541,7 +531,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000006"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-6.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Ведет кросс-функциональные продуктовые команды",
                             FullName = "Анна Белова",
                             Job = "Продакт-менеджер"
@@ -549,7 +539,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000007"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-7.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Проектирует интерфейсы на основе пользовательских данных",
                             FullName = "Дмитрий Егоров",
                             Job = "UX-дизайнер"
@@ -557,7 +547,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000008"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-8.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Занимается безопасностью приложений и API",
                             FullName = "София Медведева",
                             Job = "Инженер по безопасности"
@@ -565,7 +555,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-000000000009"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-9.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Помогает командам на ранней стадии роста",
                             FullName = "Павел Зорин",
                             Job = "Ментор стартапов"
@@ -573,7 +563,7 @@ namespace YoungConService.Migrations
                         new
                         {
                             Id = new Guid("f4000000-0000-0000-0000-00000000000a"),
-                            AvatarURL = "https://youngcon.local/avatars/speaker-10.png",
+                            AvatarURL = "https://disk.yandex.ru/i/UQpqThhyd6LYiw",
                             Bio = "Развивает инженерные и продуктовые сообщества",
                             FullName = "Ольга Андреева",
                             Job = "Лид комьюнити"
@@ -639,7 +629,7 @@ namespace YoungConService.Migrations
                             FirstName = "Леша",
                             HashPassword = "$2a$11$gCAufVWeez3MDd8oFZQ7tONAwMSZAbvLeMXyNOYHOB1Ss5/n/eZXy",
                             LastName = "Агеев",
-                            Major = "Mobile",
+                            Major = "IOS",
                             QrCode = "QR-11111111",
                             Role = "Employee"
                         },
@@ -651,7 +641,7 @@ namespace YoungConService.Migrations
                             FirstName = "Заята",
                             HashPassword = "$2a$11$UQXeDxqmj0EWcvsKyox8Y..KyqJv2k4aLVuc5NGmoqjvijPDqn9oy",
                             LastName = "Будаева",
-                            Major = "ML",
+                            Major = "Backend",
                             QrCode = "QR-33333333",
                             Role = "Client"
                         },
@@ -675,7 +665,7 @@ namespace YoungConService.Migrations
                             FirstName = "Настя",
                             HashPassword = "$2a$11$vNqPxkGEGmhG1z.8ZR0vgu.AgFqKP84V12XHleGmbCdK4ACXOMQJu",
                             LastName = "Ильяшова",
-                            Major = "Frontend",
+                            Major = "Flutter",
                             QrCode = "QR-55555555",
                             Role = "Client"
                         },
@@ -687,7 +677,7 @@ namespace YoungConService.Migrations
                             FirstName = "Ирек",
                             HashPassword = "$2a$11$YXLD4kx1Ig91fzeqPDCHheUfYfF//2BSZcGcorZ0dvZtOJYbAX5xa",
                             LastName = "Шакиров",
-                            Major = "Frontend",
+                            Major = "ML",
                             QrCode = "QR-66666666",
                             Role = "Client"
                         },
@@ -699,7 +689,7 @@ namespace YoungConService.Migrations
                             FirstName = "Сергей",
                             HashPassword = "$2a$11$gXyWzFVta14QE2rumahQKeEtwwERMEAuWhSOgbl9c0Lg44kcI3amq",
                             LastName = "Мещеряков",
-                            Major = "Mobile",
+                            Major = "Android",
                             QrCode = "QR-77777777",
                             Role = "Client"
                         });
@@ -714,6 +704,12 @@ namespace YoungConService.Migrations
                     b.Property<string>("Color")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<double>("CoordX")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("CoordY")
+                        .HasColumnType("double precision");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -741,107 +737,112 @@ namespace YoungConService.Migrations
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000001"),
                             Color = "#2563EB",
+                            CoordX = 0.10000000000000001,
+                            CoordY = 0.20000000000000001,
                             Description = "Ключевые доклады и открытие",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000001"),
-                            Icon = "sparkles.rectangle.stack.fill",
+                            Icon = "https://disk.yandex.ru/i/iKkOIrUSoGj94g",
                             Title = "Главная сцена"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000002"),
                             Color = "#7C3AED",
+                            CoordX = 0.29999999999999999,
+                            CoordY = 0.14999999999999999,
                             Description = "Практические сессии и разборы",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000002"),
-                            Icon = "hammer.fill",
+                            Icon = "https://disk.yandex.ru/i/dpqf86-EPl3LZQ",
                             Title = "Зал воркшопов"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000003"),
                             Color = "#059669",
+                            CoordX = 0.45000000000000001,
+                            CoordY = 0.25,
                             Description = "Консультации и карьерные треки",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000002"),
-                            Icon = "briefcase.fill",
+                            Icon = "https://disk.yandex.ru/i/Brxe_BOEQLs4Uw",
                             Title = "Карьерная зона"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000004"),
                             Color = "#DC2626",
+                            CoordX = 0.20000000000000001,
+                            CoordY = 0.34999999999999998,
                             Description = "Демо и стенды по ML",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000001"),
-                            Icon = "brain.head.profile",
+                            Icon = "https://disk.yandex.ru/i/Brxe_BOEQLs4Uw",
                             Title = "Лаборатория ИИ"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000005"),
                             Color = "#EA580C",
+                            CoordX = 0.5,
+                            CoordY = 0.10000000000000001,
                             Description = "iOS и Android практики",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000002"),
-                            Icon = "iphone.gen3",
+                            Icon = "https://disk.yandex.ru/i/wJm1eOGLzPXgKA",
                             Title = "Мобильная точка"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000006"),
                             Color = "#0F766E",
+                            CoordX = 0.14999999999999999,
+                            CoordY = 0.5,
                             Description = "Серверные технологии и архитектура",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000001"),
-                            Icon = "server.rack",
+                            Icon = "https://disk.yandex.ru/i/Mq_B4ltBwXqERA",
                             Title = "Бэкенд-комната"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000007"),
                             Color = "#BE185D",
+                            CoordX = 0.40000000000000002,
+                            CoordY = 0.40000000000000002,
                             Description = "UX, интерфейсы и прототипы",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000002"),
-                            Icon = "paintpalette.fill",
+                            Icon = "https://disk.yandex.ru/i/NoBvNU5C1kyYHA",
                             Title = "Дизайн-уголок"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000008"),
                             Color = "#334155",
+                            CoordX = 0.34999999999999998,
+                            CoordY = 0.55000000000000004,
                             Description = "Безопасная разработка и лучшие практики",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000001"),
-                            Icon = "shield.lefthalf.filled",
+                            Icon = "https://disk.yandex.ru/i/SRL4it0fUb1Vyg",
                             Title = "Хаб безопасности"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-000000000009"),
                             Color = "#4F46E5",
+                            CoordX = 0.55000000000000004,
+                            CoordY = 0.29999999999999999,
                             Description = "Питчи, гипотезы и рост",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000002"),
-                            Icon = "paperplane.fill",
+                            Icon = "https://disk.yandex.ru/i/vuHGvBAe5txuRAl",
                             Title = "Стартап-площадка"
                         },
                         new
                         {
                             Id = new Guid("f3000000-0000-0000-0000-00000000000a"),
                             Color = "#16A34A",
+                            CoordX = 0.25,
+                            CoordY = 0.45000000000000001,
                             Description = "Нетворкинг и вопросы экспертам",
                             FloorId = new Guid("f2000000-0000-0000-0000-000000000001"),
-                            Icon = "person.3.fill",
+                            Icon = "https://disk.yandex.ru/i/6MvK-ECffChbPg",
                             Title = "Комьюнити-зона"
                         });
-                });
-
-            modelBuilder.Entity("AchievmentUser", b =>
-                {
-                    b.HasOne("YoungConService.Domain.Entities.Achievment", null)
-                        .WithMany()
-                        .HasForeignKey("AchievmentsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("YoungConService.Domain.Entities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("EventSpeakers", b =>
@@ -864,6 +865,21 @@ namespace YoungConService.Migrations
                     b.HasOne("YoungConService.Domain.Entities.Event", null)
                         .WithMany()
                         .HasForeignKey("LikedEventsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("YoungConService.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("UserAchievments", b =>
+                {
+                    b.HasOne("YoungConService.Domain.Entities.Achievment", null)
+                        .WithMany()
+                        .HasForeignKey("AchievmentsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
