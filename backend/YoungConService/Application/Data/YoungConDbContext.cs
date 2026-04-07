@@ -60,7 +60,16 @@ public class YoungConDbContext(DbContextOptions<YoungConDbContext> options) : Db
         modelBuilder.Entity<User>()
             .HasMany(u => u.Achievments)
             .WithMany()
-            .UsingEntity(j => j.ToTable("UserAchievments"));
+            .UsingEntity<Dictionary<string, object>>(
+                "UserAchievments",
+                right => right.HasOne<Achievment>().WithMany().HasForeignKey("AchievmentsId").OnDelete(DeleteBehavior.Cascade),
+                left => left.HasOne<User>().WithMany().HasForeignKey("UserId").OnDelete(DeleteBehavior.Cascade),
+                join =>
+                {
+                    join.HasKey("AchievmentsId", "UserId");
+                    join.ToTable("UserAchievments");
+                    join.HasData(UserAchievmentSeedData.Items);
+                });
 
         // User <-> Event (LikedEvents, many-to-many)
         modelBuilder.Entity<User>()
